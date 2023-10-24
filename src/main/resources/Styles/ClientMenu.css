@@ -48,6 +48,7 @@
 
 .menu_container Button:hover {
       -fx-cursor : hand;
+      -fx-skin: ;
 }
 
 .menu_container Button FontAwesomeIconView {

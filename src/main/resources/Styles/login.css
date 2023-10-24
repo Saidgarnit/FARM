@@ -24,7 +24,7 @@
 
 .account_selector .Label {
     -fx-text-fill : #123A13;
-     -fx-font-size : 1.1em ;
+     -fx-font-size : 1.5em ;
 }
 
 .account_selector .arrow {
@@ -33,6 +33,7 @@
 
 #choice-box-popup-menu {
  -fx-background-color : #ECF39E;
+
 }
 
 /*Login form Styles */
@@ -42,36 +43,43 @@
 }
 .login_form_container{
    -fx-spacing : 15;
-   -fx-alignment : top-left ;
+  /* -fx-alignment : top-left ;*/
 }
 
 .login_form_container  .Label {
    -fx-font-size : 1.1em;
-
      -fx-font-weight : bold;
       -fx-font-color : #000000;
 }
 
 .input-field {
    -fx-background-color : #ffffff ;
-    -fx-pref-height : 35;
+    -fx-pref-height : 40;
     -fx-font-size : 1.2em;
 }
 
 .login_form_container .Button{
     -fx-background-color : #123A13;
     -fx-text-fill : #ffffff ;
-    -fx-pref-width : 350;
+    -fx-pref-width : 120;
      -fx-pref-height : 30;
       -fx-font-size : 1.2em ;
+      -fx-alignment: center;
+
 }
 
 .login_form_container .Button:hover{
     -fx-cursor : hand;
 }
 
+
+
 .error-lbl {
   -fx-text-fill : #ff0000;
+
+   -fx-text-size : 1.1em;
+       -fx-text-weight : bold;
+        -fx-text-color : #000000;
 }
 
 
