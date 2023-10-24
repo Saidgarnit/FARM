@@ -1,0 +1,33 @@
+/* Define a class for the title label */
+.title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+/* Style the username and password fields */
+.text-field, .password-field {
+    -fx-font-size: 14px;
+    -fx-pref-width: 200px;
+    -fx-pref-height: 30px;
+    -fx-background-color: #f2f2f2;
+}
+
+/* Style the login button */
+.button {
+    -fx-font-size: 16px;
+    -fx-pref-width: 100px;
+    -fx-pref-height: 40px;
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+}
+
+/* Add hover effect to the login button */
+.button:hover {
+    -fx-background-color: #0056b3;
+}
+
+/* Define a class for error messages */
+.error-message {
+    -fx-font-size: 12px;
+    -fx-text-fill: red;
+}
