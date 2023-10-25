@@ -1,88 +1,81 @@
-.login_container{
-   -fx-background-color : #EEEEEE ;
+/* Styles for the Login Container */
+.login_container {
+    background-color: #f4f4f4;
+    padding: 20px;
 }
 
-/* logo container style */
-.login_logo_container{
- -fx-background-color : #132a13;
- -fx-alignment : center ;
+/* Styles for the Logo Container */
+.login_logo_container {
+    background-color: #132a13;
+    text-align: center;
 }
 
-.login_logo_container Text{
- -fx-font-size : 2em ;
- -fx-fill : #ffffff ;
+.login_logo_container Text {
+    font-size: 2em;
+    color: #ffffff;
 }
 
-.login_logo_container FontAwesomeIconView{
-  -fx-fill : #ECF39E;
- }
+.login_logo_container FontAwesomeIconView {
+    fill: #ECF39E;
+}
 
-/*Account Selector choice Box */
+/* Styles for Account Selector Choice Box */
 .account_selector {
-   -fx-background-color : #ECF39E;
+    background-color: #ECF39E;
 }
 
 .account_selector .Label {
-    -fx-text-fill : #123A13;
-     -fx-font-size : 1.5em ;
+    color: #123A13;
+    font-size: 1.5em;
 }
 
 .account_selector .arrow {
-    -fx-background-color : #132a13;
+    background-color: #132a13;
 }
 
 #choice-box-popup-menu {
- -fx-background-color : #ECF39E;
-
+    background-color: #ECF39E;
 }
 
-/*Login form Styles */
-
+/* Styles for Login Form */
 #choice-prompt-text {
-   -fx-font-wight : 400;
-}
-.login_form_container{
-   -fx-spacing : 15;
-  /* -fx-alignment : top-left ;*/
+    font-weight: 400;
 }
 
-.login_form_container  .Label {
-   -fx-font-size : 1.1em;
-     -fx-font-weight : bold;
-      -fx-font-color : #000000;
+.login_form_container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login_form_container .Label {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
 }
 
 .input-field {
-   -fx-background-color : #ffffff ;
-    -fx-pref-height : 40;
-    -fx-font-size : 1.2em;
+    background-color: #fff;
+    height: 40px;
+    font-size: 1.2em;
 }
 
-.login_form_container .Button{
-    -fx-background-color : #123A13;
-    -fx-text-fill : #ffffff ;
-    -fx-pref-width : 120;
-     -fx-pref-height : 30;
-      -fx-font-size : 1.2em ;
-      -fx-alignment: center;
-
+.login_form_container .Button {
+    background-color: #123A13;
+    color: #fff;
+    width: 120px;
+    height: 30px;
+    font-size: 1.2em;
+    text-align: center;
+    cursor: pointer;
 }
 
-.login_form_container .Button:hover{
-    -fx-cursor : hand;
+.login_form_container .Button:hover {
+    background-color: #1f481f;
 }
-
-
 
 .error-lbl {
-  -fx-text-fill : #ff0000;
-
-   -fx-text-size : 1.1em;
-       -fx-text-weight : bold;
-        -fx-text-color : #000000;
+    color: #ff0000;
+    font-size: 1.1em;
+    font-weight: bold;
 }
-
-
-
-
-

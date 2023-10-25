@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="850.0" prefWidth="950.0" styleClass="dashboard" stylesheets="@../../Styles/Dashboard.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.login.Controllers.Client.DashboardController">
+<AnchorPane prefHeight="850.0" prefWidth="950.0" styleClass="dashboard" stylesheets="@../../Styles/Dashboard.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.login.Controllers.Farmer.DashboardController">
    <Text fx:id="acc_username" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="user_name" text="HI SAID !" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="30.0" />
    <Label fx:id="login_date" styleClass="date_lbl" text="Today : 30-12-2024" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="27.0" />
    <Text layoutX="14.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="DashBoard" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="90.0" />

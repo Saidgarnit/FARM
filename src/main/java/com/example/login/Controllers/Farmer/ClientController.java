@@ -1,4 +1,4 @@
-package com.example.login.Controllers.Client;
+package com.example.login.Controllers.Farmer;
 
 import com.example.login.Models.Model;
 import javafx.fxml.FXML;

@@ -2,7 +2,7 @@
 
 
 <?import javafx.scene.layout.*?>
-<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.login.Controllers.Client.ClientController">
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.login.Controllers.Farmer.ClientController">
 <BorderPane fx:id="client_parent" xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml" >
     <left>
