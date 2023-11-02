@@ -23,7 +23,7 @@
         <PasswordField fx:id="pswd_fld" prefWidth="441.0" styleClass="input-field" />
         <Label fx:id="conpswd_lbl" styleClass="Label" text="Confirm Password :" />
         <PasswordField fx:id="conpswd_fld" styleClass="input-field" />
-        <Button fx:id="Signup_btn" maxHeight="32.0" maxWidth="214.0" mnemonicParsing="false" onAction="#CreateAccountAction" prefHeight="32.0" prefWidth="258.0" styleClass="Button" text="Create Account" />
+        <Button fx:id="CreateAccount" maxHeight="32.0" maxWidth="214.0" mnemonicParsing="false" onAction="#CreateAccountAction" prefHeight="32.0" prefWidth="258.0" styleClass="Button" text="Create Account" />
     </VBox>
     <Label fx:id="error_lbl" layoutX="291.0" layoutY="488.0" styleClass="error-lbl" text=" " />
     <HBox layoutX="440.0" layoutY="460.0" prefHeight="46.0" prefWidth="314.0">

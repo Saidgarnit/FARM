@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-
-<?import java.lang.String?>
-<?import javafx.scene.control.Hyperlink?>
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.control.PasswordField?>
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="790.0" styleClass="login_form_container" stylesheets="@../Styles/Styles/login.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.login.Controllers.LoginController">
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="790.0" styleClass="login_form_container" stylesheets="@../Styles/Styles/login.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.login.Controllers.LoginController">
    <VBox prefHeight="400.0" prefWidth="277.0" styleClass="login_logo_container">
       <ImageView fx:id="loginImgView" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
          <Image url="@../Images/1.png" />
@@ -24,17 +23,17 @@
 
    <Label id="#choice-prompt-text" layoutX="498.0" layoutY="34.0" prefHeight="34.0" prefWidth="89.0" style="-fx-font-size: 1.9em;" styleClass="Label" text="LOGIN" textFill="#132a13" />
    <VBox layoutX="318.0" layoutY="91.0" minHeight="0.0" minWidth="0.0" prefHeight="229.0" prefWidth="443.0" styleClass="login_form_container" AnchorPane.leftAnchor="318.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="91.0">
-      <Label fx:id="acc_usr_lbl" styleClass="Label" text="Account Username :" />
-      <TextField fx:id="acc_usr_fld" styleClass="input-field" />
-      <Label fx:id="acc_pswd_lbl" styleClass="Label" text="Account Password :" />
-      <PasswordField fx:id="acc_pswd_fld" prefHeight="130.0" prefWidth="468.0" styleClass="input-field" />
+      <Label fx:id="email_lbl" styleClass="Label" text="Account Username :" />
+      <TextField fx:id="email_fld" styleClass="input-field" />
+      <Label fx:id="pswd_lbl" styleClass="Label" text="Account Password :" />
+      <PasswordField fx:id="pswd_fld" prefHeight="130.0" prefWidth="468.0" styleClass="input-field" />
    </VBox>
    <HBox layoutX="432.0" layoutY="276.0" prefHeight="19.0" prefWidth="222.0">
-      <Button fx:id="Login_btn" maxHeight="32.0" maxWidth="214.0" onAction="#onLogin" mnemonicParsing="false"  prefHeight="32.0" prefWidth="152.0" styleClass="Button" text="Login" />
+      <Button fx:id="Login_btn" maxHeight="32.0" maxWidth="214.0" mnemonicParsing="false" onAction="#onLogin" prefHeight="32.0" prefWidth="152.0" styleClass="Button" text="Login" />
    </HBox>
    <Label fx:id="error_lbl" layoutX="307.0" layoutY="352.0" styleClass="error-lbl" text=" " />
-   <HBox layoutX="461.0" layoutY="324.0" prefHeight="46.0" prefWidth="314.0">
-      <Label prefHeight="19.0" prefWidth="164.0" styleClass="Label" text="Already have an account?">
+   <HBox layoutX="461.0" layoutY="335.0" prefHeight="45.0" prefWidth="314.0">
+      <Label prefHeight="19.0" prefWidth="154.0" styleClass="Label" text="Don't Have a Account?">
          <font>
             <Font size="13.0" />
          </font>
