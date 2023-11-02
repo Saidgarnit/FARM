@@ -7,4 +7,5 @@ public class ProductsController {
 
 
     public ListView transactin_listview;
+    private String name="hello world";
 }
