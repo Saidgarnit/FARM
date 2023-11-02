@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.PasswordField?>
+<AnchorPane prefHeight="850.0" prefWidth="950.0" styleClass="login_form_container" stylesheets="@../../Styles/Styles/login.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.login.Controllers.Farmer.ProfileController">
+   <VBox layoutX="507.0" layoutY="289.0" minHeight="0.0" minWidth="0.0" prefHeight="383.0" prefWidth="310.0" styleClass="login_form_container">
+      <Label fx:id="username_lbl" styleClass="Label" text="Account Username :" />
+      <TextField fx:id="usrname_lbl" prefHeight="38.0" prefWidth="238.0" styleClass="input-field" />
+      <Label fx:id="pswd_lbl" styleClass="Label" text="Account Password :" />
+      <PasswordField fx:id="pswd_fld" layoutX="10.0" layoutY="28.0" prefHeight="38.0" prefWidth="238.0" styleClass="input-field" />
+      <Label fx:id="newpass_lbl" layoutX="10.0" layoutY="66.0" styleClass="Label" text="New Password :" />
+      <PasswordField fx:id="newpass_fld" layoutX="10.0" layoutY="84.0" prefHeight="38.0" prefWidth="238.0" styleClass="input-field" />
+   </VBox>
+   <VBox layoutX="779.0" layoutY="40.0" prefHeight="127.0" prefWidth="136.0">
+      <ImageView fx:id="img_view" fitHeight="136.0" fitWidth="151.0" pickOnBounds="true" preserveRatio="true" styleClass="ImageView">
+      <Image url="@../../Images/8.png" />
+      </ImageView>
+   </VBox>
+   <Button fx:id="save_btn" layoutX="300.0" layoutY="731.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="156.0" styleClass="Button" text="Save Changes" />
+   <VBox layoutX="44.0" layoutY="200.0" minHeight="0.0" minWidth="0.0" prefHeight="449.0" prefWidth="310.0" styleClass="login_form_container">
+      <Label fx:id="name_lbl" styleClass="Label" text="Full Name :" />
+      <TextField fx:id="name_fld"  prefHeight="38.0" prefWidth="238.0" styleClass="input-field" />
+      <Label fx:id="mail_lbl" styleClass="Label" text="E-Mail Address :" />
+      <TextField fx:id="mail_fld" layoutX="10.0" layoutY="28.0" prefHeight="38.0" prefWidth="238.0" styleClass="input-field" />
+      <Label fx:id="tele_lbl" layoutX="10.0" layoutY="66.0" styleClass="Label" text="N*Telephone :" />
+      <TextField fx:id="tele_fld" layoutX="10.0" layoutY="84.0" prefHeight="38.0" prefWidth="238.0" styleClass="input-field" />
+      <Label fx:id="datebird_lbl" layoutX="10.0" layoutY="180.0" styleClass="Label" text="Date Bird :" />
+      <DatePicker prefWidth="308.0" styleClass="input-field" />
+   </VBox>
+   <VBox layoutX="69.0" layoutY="90.0" minHeight="0.0" minWidth="0.0" prefHeight="35.0" prefWidth="143.0" styleClass="login_form_container" />
+   <VBox layoutX="427.0" layoutY="28.0" prefHeight="56.0" prefWidth="201.0">
+      <Label id="#choice-prompt-text" prefHeight="39.0" prefWidth="199.0" style="-fx-font-size: 2.2em;" styleClass="Label" text="Profile " textFill="#132a13" />
+   </VBox>
+   <HBox layoutX="485.0" layoutY="541.0" prefHeight="26.0" prefWidth="159.0" />
+   <VBox layoutX="789.0" layoutY="176.0" prefHeight="35.0" prefWidth="115.0">
+      <Button fx:id="edit_btn" mnemonicParsing="false" prefHeight="32.0" prefWidth="143.0" styleClass="Button"
+              text="Edit"/>
+   </VBox>
+   <VBox layoutX="98.0" layoutY="146.0" prefHeight="35.0" prefWidth="159.0">
+      <Label id="#choice-prompt-text" prefHeight="34.0" prefWidth="184.0" style="-fx-font-size: 1.5em;"
+             styleClass="Label" text="Profile Setting" textFill="#132a13"/>
+   </VBox>
+   <Label id="#choice-prompt-text" layoutX="558.0" layoutY="220.0" prefHeight="34.0" prefWidth="184.0" style="-fx-font-size: 1.5em;" styleClass="Label" text="Login Setting" textFill="#132a13" />
+</AnchorPane>

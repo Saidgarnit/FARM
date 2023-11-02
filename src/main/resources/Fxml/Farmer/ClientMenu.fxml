@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.String?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
-<?import javafx.scene.text.Text?>
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="239.0" styleClass="main_menu_container" stylesheets="@../../Styles/ClientMenu.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.login.Controllers.Farmer.ClientMenuController">
    <AnchorPane prefHeight="850.0" prefWidth="236.0" styleClass="left_container">
@@ -27,14 +24,14 @@
                </ImageView>
             </graphic>
          </Button>
-         <Button fx:id="Products_btn" mnemonicParsing="false" styleClass="alt_menu_btn" text="Products">
+         <Button fx:id="Products_btn" mnemonicParsing="false" styleClass="alt_menu_btn" text="Production">
             <graphic>
                <ImageView fx:id="Products_icon" fitHeight="25.0" fitWidth="22.0" style="-fx-max-width: 20px;" styleClass="logout_btn">
                   <Image url="@../../Images/4.png" />
                </ImageView>
             </graphic>
          </Button>
-         <Button fx:id="Suppliers_btn" mnemonicParsing="false" styleClass="alt_menu_btn" text="Suppliers">
+         <Button fx:id="Suppliers_btn" mnemonicParsing="false" styleClass="alt_menu_btn" text="Vaccination">
             <graphic>
                <ImageView fx:id="Suppliers_icon" fitHeight="25.0" fitWidth="22.0" style="-fx-max-width: 20px;" styleClass="logout_btn">
                   <Image url="@../../Images/6.png" />
@@ -48,6 +45,20 @@
                </ImageView>
             </graphic>
          </Button>
+         <Button fx:id="Charges_btn" mnemonicParsing="false" styleClass="alt_menu_btn" text="    Charges">
+            <graphic>
+               <ImageView fx:id="Charges_Icon" fitHeight="25.0" fitWidth="22.0" style="-fx-max-width: 20px;">
+                  <Image url="@../../Images/11.png"/>
+               </ImageView>
+            </graphic>
+         </Button>
+         <Button fx:id="Ventes_btn" mnemonicParsing="false" styleClass="alt_menu_btn" text="      Ventes">
+            <graphic>
+               <ImageView fx:id="Ventes_icon" fitHeight="25.0" fitWidth="22.0" style="-fx-max-width: 20px;" styleClass="logout_btn">
+                  <Image url="@../../Images/10.png" />
+               </ImageView>
+            </graphic>
+         </Button>
          <Line endX="120.0" />
 
          <Button fx:id="profil_btn" mnemonicParsing="false" styleClass="alt_menu_btn" text="Profile">
@@ -57,22 +68,13 @@
                </ImageView>
             </graphic>
          </Button>
-         <Button fx:id="logout_btn" mnemonicParsing="false" prefWidth="150.0" styleClass="alt_menu_btn" text="Logout">
+         <Button fx:id="logout_btn" mnemonicParsing="false" onMouseClicked="#logout" prefWidth="150.0" styleClass="alt_menu_btn" text="Logout">
             <graphic>
                <ImageView fx:id="logou_icon" fitHeight="25.0" fitWidth="22.0" style="-fx-max-width: 20px;" styleClass="logout_btn">
                   <Image url="@../../Images/3.png" />
                </ImageView>
             </graphic>
          </Button>
-      </VBox>
-      <VBox prefHeight="120.0" prefWidth="130.0" styleClass="report_container" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
-         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Report Probleme ?" />
-         <Label text="Use this to report Problems" />
-         <Button fx:id="report_btn" mnemonicParsing="false" text="Reoprt" textFill="#cc5555">
-            <styleClass>
-               <String fx:value="report_container" />
-               <String fx:value="button" />
-            </styleClass></Button>
       </VBox>
    </AnchorPane>
 </VBox>

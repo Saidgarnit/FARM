@@ -1,31 +1,39 @@
 package com.example.login.Views;
 
 import com.example.login.Controllers.Farmer.ClientController;
+import com.example.login.Controllers.LoginController;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class ViewFactory {
+    private  AnchorPane LogoutView;
 
     private AnchorPane dashboardView;
 
     private AnchorPane transactionsView;
 
     private AnchorPane AccountsView;
+    private AnchorPane ProfileView;
 
+    private AnchorPane EmployeesView;
+    private AnchorPane ChrgesView;
+    private AnchorPane VentesView;
     private final StringProperty clientSelectedMenuItem;
 
 
 
 
     public ViewFactory(StringProperty clientSelectedMenuItem) {
-        this.clientSelectedMenuItem = new SimpleStringProperty("SB.fxml");
+        this.clientSelectedMenuItem = new SimpleStringProperty("Fxml/Login.fxml");
         // Initialize your ViewFactory here if needed
     }
 
@@ -59,7 +67,6 @@ public class ViewFactory {
         return transactionsView;
     }
 
-
     public AnchorPane getAccountsView() throws IOException {
         if (AccountsView == null) {
             try {
@@ -73,29 +80,80 @@ public class ViewFactory {
         }
         return AccountsView;
     }
+    public AnchorPane getEmployeesView() throws IOException {
+        if (EmployeesView == null) {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Farmer/Employees.fxml"));
+                EmployeesView = loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+                // You might want to show an error message to the user or handle it appropriately
+                throw e; // Re-throw the exception if you want it to be handled further
+            }
+        }
+        return EmployeesView;
+    }
+    public AnchorPane getChargesView() throws IOException {
+        if (ChrgesView == null) {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Farmer/Charges.fxml"));
+                ChrgesView = loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+                // You might want to show an error message to the user or handle it appropriately
+                throw e; // Re-throw the exception if you want it to be handled further
+            }
+        }
+        return ChrgesView;
+    }
+    public AnchorPane getVentesView() throws IOException {
+        if (VentesView == null) {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Farmer/Ventes.fxml"));
+                VentesView = loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+                // You might want to show an error message to the user or handle it appropriately
+                throw e; // Re-throw the exception if you want it to be handled further
+            }
+        }
+        return VentesView;
+    }
+    public AnchorPane getProfileView() throws IOException {
+        if (ProfileView == null) {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Farmer/Profile.fxml"));
+                ProfileView = loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+                // You might want to show an error message to the user or handle it appropriately
+                throw e; // Re-throw the exception if you want it to be handled further
+            }
+        }
+        return ProfileView;
+    }
+//    public Node getLogoutView() throws IOException {
+//
+//        return null;
+//    }
 
 
 
-
-
-
-
-    public void showLoginWindow() {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/SB.fxml"));
-            createStage(loader, "Login");
+    public void showLoginWindow() throws IOException {
+        FXMLLoader Loader = new FXMLLoader(getClass().getResource("/Fxml/Login.fxml"));
+        //  FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Login.fxml"));
+        createStage(Loader);
     }
 
-
-
-   /* public void showClientWindow() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Client/Client.fxml"));
-        Parent root = loader.load();
-
-        ClientController clientController = new ClientController();
-        loader.setController(clientController);
-        createStage(loader, "Client");
+    private void createStage(FXMLLoader loader) throws IOException {
+        Scene scene = new Scene(loader.load());
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.getIcons().add(new Image(String.valueOf(getClass().getResource("/Images/9.png"))));
+        stage.setResizable(false);
+        stage.setTitle("Login"); // Set the window title here
+        stage.show();
     }
-*/
 
 
     public void showClientWindow() {
@@ -107,40 +165,27 @@ public class ViewFactory {
             ClientController clientController = loader.getController();
 
             createStage(root, clientController, "FIRMTY");
+
+
         } catch (IOException e) {
             e.printStackTrace();
             // Handle or log the exception, and consider showing an error message to the user
         }
     }
 
-    private void createStage(Parent root, ClientController clientController, String client) {
+    private void createStage(Parent root, ClientController clientController, String FIRMTY) {
         Scene scene = new Scene(root);
         Stage stage = new Stage();
+        stage.setTitle(FIRMTY);
+        stage.getIcons().add(new Image(String.valueOf(getClass().getResource("/Images/9.png"))));
+        stage.setResizable(false);
         stage.setScene(scene);
-        stage.setTitle(client);
-
         // Set the controller for the stage
         stage.setUserData(clientController);
-
         stage.show();
     }
 
 
-
-    private void createStage(FXMLLoader loader, String title) {
-        try {
-          Scene scene = new Scene(loader.load());
-         Stage stage = new Stage();
-         stage.setScene(scene);
-       stage.setTitle(title);
-        stage.show();
-
-
-    } catch (IOException e) {
-            e.printStackTrace();
-            // You might want to show an error message to the user
-        }
-    }
 
     public void closeStage(Stage stage) {
         if (stage != null) {
