@@ -12,14 +12,14 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" styleClass="login_form_container" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1" fx:controller="com.example.login.Controllers.LoginController">
     <VBox prefHeight="400.0" prefWidth="200.0" styleClass="login_logo_container">
-        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="BNKTYV">
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="BNKTY">
             <font>
                 <Font size="25.0" />
             </font>
         </Text>
     </VBox>
     <VBox layoutX="240.0" layoutY="24.0" prefHeight="350.0" prefWidth="413.0" styleClass="login_form_container" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="47.0" AnchorPane.topAnchor="24.0">
-        <Label fx:id="choicePromptText" styleClass="Label" text="Choose Your Account Typee :" />
+        <Label fx:id="choicePromptText" styleClass="Label" text="Choose Your Account Type :" />
         <ChoiceBox fx:id="acc_selector" prefWidth="150.0" styleClass="account_selector" />
         <Label fx:id="acc_usr_lbl" styleClass="Label" text="Account Username :" />
         <TextField fx:id="acc_usr_fld" styleClass="input-field" />
