@@ -24,7 +24,6 @@ import java.util.ResourceBundle;
 public class LoginController implements Initializable {
 
     public Hyperlink SignUp;
-    public Hyperlink SignUp2;
 
     public Label email_lbl;
     public TextField email_fld;
