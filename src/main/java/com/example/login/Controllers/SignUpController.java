@@ -42,6 +42,7 @@ public class SignUpController implements Initializable {
     @FXML
     public Button CreateAccount;
     public Hyperlink Signin;
+    public Label error_lbl;
 
     private Connection dbConnection;
 
@@ -126,11 +127,13 @@ public class SignUpController implements Initializable {
         } else {
             if (dbConnection != null) {
                 try {
-                    String insertQuery = "INSERT INTO admin (full_name, email, password) VALUES (?, ?, ?)";
+                    // Modify the insertQuery to include NTele, DateBird, and Age
+                    String insertQuery = "INSERT INTO admin (full_name, email, password, NTele, DateBird, Age, image_path) VALUES (?, ?, ?, '0600000000', CURRENT_DATE, ?, 'C:\\Users\\Said\\Desktop\\ProjetFX\\login 2\\src\\main\\resources\\Images\\14.png')";
                     PreparedStatement preparedStatement = dbConnection.prepareStatement(insertQuery);
                     preparedStatement.setString(1, fullname);
                     preparedStatement.setString(2, email);
                     preparedStatement.setString(3, password);
+                    preparedStatement.setInt(4, generateRandomAge());
 
                     int rowsAffected = preparedStatement.executeUpdate();
                     preparedStatement.close();
@@ -139,8 +142,7 @@ public class SignUpController implements Initializable {
                         showSuccessAlert("Admin account created successfully!");
                         clearFields();
                         showLoginScreen(event);
-                    }
-                    else {
+                    } else {
                         showAlert("Admin account creation failed.");
                     }
                 } catch (SQLException | IOException e) {
@@ -149,7 +151,10 @@ public class SignUpController implements Initializable {
                 }
             }
         }
-
+    }
+    // Generate a random age between 15 and 70
+    private int generateRandomAge() {
+        return 15 + (int)(Math.random() * 56); // 15 + random number between 0 and 55
     }
 
 

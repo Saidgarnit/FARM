@@ -1,4 +1,5 @@
 package com.example.login.Controllers;
+import com.example.login.SessionManager; // Adjust the package name as needed
 
 import com.example.login.JbdcJava;
 import javafx.event.ActionEvent;
@@ -24,7 +25,6 @@ import java.util.ResourceBundle;
 public class LoginController implements Initializable {
 
     public Hyperlink SignUp;
-
     public Label email_lbl;
     public TextField email_fld;
     public Label pswd_lbl;
@@ -40,14 +40,19 @@ public class LoginController implements Initializable {
     }
 
     @FXML
+
     public void onLogin(ActionEvent event) throws IOException {
         String enteredEmail = email_fld.getText();
         String enteredPassword = pswd_fld.getText();
 
-        if (dbConnection != null && isValidLogin(enteredEmail, enteredPassword)) {
+        if (enteredEmail.isEmpty() || enteredPassword.isEmpty()) {
+            showLoginErrorAlert("Please enter both email and password.");
+        } else if (dbConnection != null && isValidLogin(enteredEmail, enteredPassword)) {
+            // Set the logged-in admin's email in the session
+            SessionManager.getInstance().setLoggedInAdminEmail(enteredEmail);
             openClientScreen(event);
         } else {
-            showLoginErrorAlert();
+            showLoginErrorAlert("Incorrect email or password. Please try again.");
         }
     }
 
@@ -57,13 +62,20 @@ public class LoginController implements Initializable {
             PreparedStatement preparedStatement = dbConnection.prepareStatement(query);
             preparedStatement.setString(1, email);
             preparedStatement.setString(2, password);
+
             ResultSet resultSet = preparedStatement.executeQuery();
 
-            boolean valid = resultSet.next();
-            resultSet.close();
-            preparedStatement.close();
-
-            return valid;
+            if (resultSet.next()) {
+                // User login is valid
+                resultSet.close();
+                preparedStatement.close();
+                return true;
+            } else {
+                // User login is not valid
+                resultSet.close();
+                preparedStatement.close();
+                return false;
+            }
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
@@ -84,14 +96,22 @@ public class LoginController implements Initializable {
         loginStage.close();
     }
 
-    private void showLoginErrorAlert() {
+    private void showLoginErrorAlert(String errorMessage) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Login Error");
         alert.setHeaderText("Login Failed");
-        alert.setContentText("Incorrect email or password. Please try again.");
+        alert.setContentText(errorMessage);
         alert.showAndWait();
     }
 
-    public void signUpAction(ActionEvent event) {
+    public void signUpAction(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/Fxml/Sign.fxml"));
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.getIcons().add(new Image(String.valueOf(getClass().getResource("/Images/9.png"))));
+        stage.setTitle("SignUp");
+        stage.show();
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        currentStage.close();
     }
 }
