@@ -103,8 +103,8 @@ public class SignUpController implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("/Fxml/Login.fxml"));
         Stage stage = new Stage();
         stage.setScene(new Scene(root));
-        stage.getIcons().add(new Image(String.valueOf(getClass().getResource("/Images/9.png"))));
-        stage.setTitle("LogIn");
+        stage.getIcons().add(new Image(String.valueOf(getClass().getResource("/Images/19.gif"))));
+        stage.setTitle("FIRMTY");
         stage.show();
 
         Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();

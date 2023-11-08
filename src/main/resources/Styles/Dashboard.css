@@ -39,12 +39,15 @@
     -fx-font-size: 2.6em;
     -fx-font-family: "Calibri Light";
     -fx-text-fill: #AAAAAA;
+    -fx-text-fill: black; /* Set the text color to black */
+     -fx-font-weight: bold; /* Make the text bold */
 }
 
-.date_lbl {
-    -fx-text-fill: #AAAAAA;
-    -fx-font-size: 1.1em;
+.text .date_lbl {
+    -fx-text-fill: black; /* Set the text color to black */
+    -fx-font-size: 2.5em; /* Increase the font size */
     -fx-font-family: "Calibri Light";
+    -fx-font-weight: bold; /* Make the text bold */
 }
 
 .section_title {
@@ -99,7 +102,13 @@
     -fx-font-size: 1.5em;
     -fx-text-alignment: center;
 }
-
+.account_num {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: Calibri;
+    -fx-font-size: 2em;
+    -fx-text-alignment: center;
+     -fx-font-weight: bold;
+}
 /* Styles for Accounts Summary View */
 .summary_view {
     -fx-background-color: #FFFFFF;
@@ -193,4 +202,23 @@
 
 .send_money_container Button:hover {
     -fx-cursor: hand;
+}
+/* Style for the BarChart */
+.bar-chart {
+    -fx-bar-fill: #3498DB; /* Bar color */
+}
+
+/* Style for the PieChart */
+.pie-chart {
+    -fx-pie-chart-label-line-length: 20px;
+    -fx-pie-chart-label-line-color: #555;
+    -fx-pie-chart-label-line-stroke-width: 1px;
+    -fx-pie-chart-label-line-visible: true;
+    -fx-pie-chart-label-fill: #555;
+    -fx-pie-chart-data-0-fill: #E74C3C; /* Color for the first data point */
+    -fx-pie-chart-data-1-fill: #3498DB; /* Color for the second data point */
+    -fx-pie-chart-data-2-fill: #2ECC71; /* Color for the third data point */
+    -fx-pie-chart-data-3-fill: #F1C40F; /* Color for the fourth data point */
+    -fx-pie-chart-data-4-fill: #9B59B6; /* Color for the fifth data point */
+    /* Add more data point styles as needed */
 }

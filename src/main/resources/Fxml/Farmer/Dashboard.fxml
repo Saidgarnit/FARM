@@ -6,20 +6,24 @@
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="850.0" prefWidth="950.0" styleClass="dashboard" stylesheets="@../../Styles/Dashboard.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.login.Controllers.Farmer.DashboardController">
-   <Text fx:id="acc_username" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="user_name" text="HI SAID !" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="30.0" />
-   <Label fx:id="login_date" styleClass="date_lbl" text="Today : 30-12-2024" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="27.0" />
+   <Label fx:id="login_date" prefHeight="52.0" prefWidth="112.0" styleClass="date_lbl" text="Today : 30-12-2024" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="27.0" />
    <Text layoutX="14.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="DashBoard" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="90.0" />
    <HBox layoutX="35.0" layoutY="122.0" prefHeight="183.0" prefWidth="906.0" styleClass="accounts_view" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="122.0">
       <AnchorPane prefHeight="150.0" prefWidth="295.0">
          <Label layoutX="22.0" layoutY="36.0" styleClass="account_balance" text="Production" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="25.0" fx:id="xheck_bal" />
-         <Label fx:id="check_nb" layoutX="195.0" layoutY="169.0" styleClass="account_number" text="442578" AnchorPane.bottomAnchor="10.199999999999989" AnchorPane.leftAnchor="195.0" />
-         <Label layoutX="14.0" layoutY="143.0" styleClass="account_number" text="Numbers Products" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" />
+         <Label fx:id="Production_lbl" layoutX="218.0" layoutY="127.0" styleClass="account_num" text="44" AnchorPane.bottomAnchor="7.400000000000006" AnchorPane.leftAnchor="218.0" />
+         <Label layoutX="14.0" layoutY="143.0" styleClass="account_number" text="Numbers of Products" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" />
+         <ImageView fx:id="productions_img" fitHeight="76.0" fitWidth="83.0" layoutX="205.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../Images/00.png" />
+         </ImageView>
          <styleClass>
             <String fx:value="account" />
             <String fx:value="account_gradient" />
@@ -27,8 +31,11 @@
       </AnchorPane>
       <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="160.0" prefWidth="295.0">
          <Label fx:id="saving_bal" layoutX="22.0" layoutY="36.0" styleClass="account_balance" text="Employees" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="25.0" />
-         <Label fx:id="saving_nb" layoutX="209.0" layoutY="169.0" styleClass="account_number" text="442578" AnchorPane.bottomAnchor="10.199999999999989" AnchorPane.leftAnchor="209.0" />
-         <Label layoutX="14.0" layoutY="143.0" styleClass="account_number" text="Numbers Employe" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" />
+         <Label fx:id="emp_lbl" layoutX="225.0" layoutY="127.0" styleClass="account_num" text="44" AnchorPane.bottomAnchor="7.400000000000006" AnchorPane.leftAnchor="225.0" />
+         <Label layoutX="15.0" layoutY="130.0" styleClass="account_number" text="Numbers of Employees" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="15.0" />
+         <ImageView fitHeight="76.0" fitWidth="83.0" layoutX="199.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../Images/01.png" />
+         </ImageView>
          <styleClass>
             <String fx:value="account" />
             <String fx:value="account_gradient" />
@@ -40,8 +47,11 @@
             <String fx:value="account_gradient" />
          </styleClass>
          <Label fx:id="saving_bal1" layoutX="22.0" layoutY="36.0" styleClass="account_balance" text="Vaccinations" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="25.0" />
-         <Label fx:id="saving_nb1" layoutX="204.0" layoutY="169.0" styleClass="account_number" text="442578" AnchorPane.bottomAnchor="10.199999999999989" AnchorPane.leftAnchor="204.0" />
-         <Label layoutX="14.0" layoutY="143.0" styleClass="account_number" text="Numbers Supplies" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" />
+         <Label fx:id="Vaccination_lbl" layoutX="224.0" layoutY="127.0" styleClass="account_num" text="44" AnchorPane.bottomAnchor="7.400000000000006" AnchorPane.leftAnchor="224.0" />
+         <Label layoutX="14.0" layoutY="143.0" styleClass="account_number" text="Numbers of Vaccinations" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" />
+         <ImageView fitHeight="76.0" fitWidth="83.0" layoutX="205.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../Images/02.png" />
+         </ImageView>
       </AnchorPane>
    </HBox>
    <Text layoutX="276.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="Barchart" AnchorPane.leftAnchor="276.0" AnchorPane.topAnchor="370.0" />
@@ -54,10 +64,11 @@
             <NumberAxis prefHeight="391.0" prefWidth="28.0" side="LEFT" />
          </yAxis>
       </BarChart>
-      <VBox layoutX="612.0" layoutY="10.0" prefHeight="411.0" prefWidth="300.0">
+      <VBox layoutX="612.0" layoutY="10.0" prefHeight="411.0" prefWidth="300.0" styleClass="pie-chart">
          <PieChart fx:id="pieChart" prefHeight="439.0" prefWidth="300.0" styleClass="pie-chart" />
       </VBox>
    </AnchorPane>
    <Text layoutX="747.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="Piechart" />
+   <Label fx:id="fullname_lbl" layoutX="35.0" layoutY="35.0" styleClass="user_name" text="HI SAID !" />
 
 </AnchorPane>

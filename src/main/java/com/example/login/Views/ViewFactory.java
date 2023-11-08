@@ -149,9 +149,9 @@ public class ViewFactory {
         Scene scene = new Scene(loader.load());
         Stage stage = new Stage();
         stage.setScene(scene);
-        stage.getIcons().add(new Image(String.valueOf(getClass().getResource("/Images/9.png"))));
+        stage.getIcons().add(new Image(String.valueOf(getClass().getResource("/Images/19.gif"))));
         stage.setResizable(false);
-        stage.setTitle("Login"); // Set the window title here
+        stage.setTitle("FIRMTY"); // Set the window title here
         stage.show();
     }
 
@@ -177,7 +177,7 @@ public class ViewFactory {
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.setTitle(FIRMTY);
-        stage.getIcons().add(new Image(String.valueOf(getClass().getResource("/Images/9.png"))));
+        stage.getIcons().add(new Image(String.valueOf(getClass().getResource("/Images/19.gif"))));
         stage.setResizable(false);
         stage.setScene(scene);
         // Set the controller for the stage
