@@ -21,7 +21,7 @@ public class App extends Application {
         dbConnection = new JbdcJava();
 
         // Show the login window
-        viewFactory.showLoginWindow();
+        viewFactory.showClientWindow();
     }
 
     public static void main(String[] args) {

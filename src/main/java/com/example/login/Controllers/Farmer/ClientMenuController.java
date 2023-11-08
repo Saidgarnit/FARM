@@ -277,6 +277,8 @@ public class ClientMenuController implements Initializable {
             Parent root = loader.load();
             Stage loginStage = new Stage();
             loginStage.setScene(new Scene(root));
+            loginStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/Images/9.png"))));
+            loginStage.setTitle("LogIn");
             loginStage.show();
 
             // Close the current stage (the one with the logout button)

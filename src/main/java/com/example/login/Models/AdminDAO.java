@@ -28,7 +28,7 @@ public class AdminDAO {
                         resultSet.getString("ntele"),
                         resultSet.getInt("Age"),
                         resultSet.getDate("datebird").toLocalDate(),
-                        resultSet.getString("password"), // corrected column name
+                        resultSet.getString("password"),
                         resultSet.getString("image_path")
                 );
             }

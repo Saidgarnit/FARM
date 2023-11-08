@@ -1,50 +1,68 @@
 package com.example.login.Controllers.Farmer;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.chart.*;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.chart.PieChart;
 
-public class DashboardController {
+import java.net.URL;
+import java.util.ResourceBundle;
 
-    public Label saving_bal1;
+public class DashboardController implements Initializable {
+
     public Label saving_nb1;
     @FXML
-    private Text acc_username;
-
+    private PieChart pieChart;
     @FXML
-    private TextField amount_fld;
+    private BarChart<String, Number> barChart;
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        // Create sample data for the PieChart
+        ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList(
+                new PieChart.Data("Category 1", 30),
+                new PieChart.Data("Category 2", 40),
+                new PieChart.Data("Category 3", 20),
+                new PieChart.Data("Category 4", 10)
+        );
 
-    @FXML
-    private Label check_nb;
+        // Add the data to the PieChart
+        pieChart.setData(pieChartData);
 
-    @FXML
-    private Label ex_lbl;
+        // Create axes
+        CategoryAxis xAxis = new CategoryAxis();
+        NumberAxis yAxis = new NumberAxis();
 
-    @FXML
-    private Label inc_lbl;
+        // Create the BarChart
+        // No need to create a new BarChart instance
+        // Use the one defined in your FXML
+        // barChart = new BarChart<>(xAxis, yAxis);
 
-    @FXML
-    private Label login_date;
+        // Create two series
+        XYChart.Series<String, Number> series1 = new XYChart.Series<>();
+        series1.setName("Element 1");
 
-    @FXML
-    private TextArea msg_fld;
+        XYChart.Series<String, Number> series2 = new XYChart.Series<>();
+        series2.setName("Element 2");
 
-    @FXML
-    private TextField payee_fld;
+        // Add data to the series
+        series1.getData().add(new XYChart.Data<>("Category 1", 10));
+        series1.getData().add(new XYChart.Data<>("Category 2", 20));
+        series1.getData().add(new XYChart.Data<>("Category 3", 15));
+        series1.getData().add(new XYChart.Data<>("Category 4", 25));
 
-    @FXML
-    private Label saving_bal;
+        series2.getData().add(new XYChart.Data<>("Category 1", 15));
+        series2.getData().add(new XYChart.Data<>("Category 2", 10));
+        series2.getData().add(new XYChart.Data<>("Category 3", 30));
+        series2.getData().add(new XYChart.Data<>("Category 4", 5));
 
-    @FXML
-    private Label saving_nb;
+        // Add the series to the BarChart
+        barChart.getData().addAll(series1, series2);
+    }
 
-    @FXML
-    private Button sendmoney_btn;
 
-    @FXML
-    private ListView<?> trans_listview;
-
-    @FXML
-    private Label xheck_bal;
-
+    // Other controller methods
 }
