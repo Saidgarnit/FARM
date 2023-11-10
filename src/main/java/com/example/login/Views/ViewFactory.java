@@ -27,6 +27,7 @@ public class ViewFactory {
     private AnchorPane EmployeesView;
     private AnchorPane ChrgesView;
     private AnchorPane VentesView;
+    private AnchorPane SuivieView;
     private final StringProperty clientSelectedMenuItem;
 
 
@@ -57,6 +58,19 @@ public class ViewFactory {
         if (transactionsView == null) {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Farmer/Products.fxml"));
+                transactionsView = loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+                // You might want to show an error message to the user or handle it appropriately
+                throw e; // Re-throw the exception if you want it to be handled further
+            }
+        }
+        return transactionsView;
+    }
+    public AnchorPane getSuivieView() throws IOException {
+        if (transactionsView == null) {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Farmer/Suivie.fxml"));
                 transactionsView = loader.load();
             } catch (IOException e) {
                 e.printStackTrace();

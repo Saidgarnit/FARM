@@ -32,6 +32,8 @@ public class ClientMenuController implements Initializable {
     public Button Charges_btn;
     public ImageView Charges_Icon;
     public ImageView Ventes_icon;
+    public Button Suivie_btn;
+    public ImageView Suivie_icon;
     @FXML
     private Button dashboard_btn;
     @FXML
@@ -70,6 +72,7 @@ public class ClientMenuController implements Initializable {
         menuButtons = new Button[]{
                 dashboard_btn,
                 Products_btn,
+                Suivie_btn,
                 Suppliers_btn,
                 Employees_btn,
                 profil_btn,
@@ -100,6 +103,8 @@ public class ClientMenuController implements Initializable {
                 icon = dashboard_icon;
             } else if (selectedButton == Products_btn) {
                 icon = Products_icon;
+            } else if (selectedButton == Suivie_btn) {
+                icon = Suivie_icon;
             } else if (selectedButton == Suppliers_btn) {
                 icon = Suppliers_icon;
             } else if (selectedButton == Employees_btn) {
@@ -130,6 +135,9 @@ public class ClientMenuController implements Initializable {
         } else if (button == Products_btn) {
             icon = Products_icon;
             onTransactions();
+        } else if (button == Suivie_btn) {
+            icon = Suivie_icon;
+            onSuivie();
         } else if (button == Suppliers_btn) {
             icon = Suppliers_icon;
             onAccounts();
@@ -160,6 +168,9 @@ public class ClientMenuController implements Initializable {
 
     private void onTransactions() {
         Model.getInstance().getViewFactory().getClientSelectedMenuItem().set("Transaction");
+    }
+
+    private void onSuivie() {Model.getInstance().getViewFactory().getClientSelectedMenuItem().set("Suivie");
     }
 
     private void onAccounts() {
@@ -196,6 +207,9 @@ public class ClientMenuController implements Initializable {
                         break;
                     case "Products_btn":
                         icon = Products_icon;
+                        break;
+                    case "Suivie_btn;":
+                        icon = Suivie_icon;
                         break;
                     case "Suppliers_btn":
                         icon = Suppliers_icon;
@@ -237,6 +251,8 @@ public class ClientMenuController implements Initializable {
                     icon = dashboard_icon;
                 } else if (button == Products_btn) {
                     icon = Products_icon;
+                } else if (button == Suivie_btn) {
+                    icon = Suivie_icon;
                 } else if (button == Suppliers_btn) {
                     icon = Suppliers_icon;
                 } else if (button == Employees_btn) {
@@ -277,8 +293,8 @@ public class ClientMenuController implements Initializable {
             Parent root = loader.load();
             Stage loginStage = new Stage();
             loginStage.setScene(new Scene(root));
-            loginStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/Images/9.png"))));
-            loginStage.setTitle("LogIn");
+            loginStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/Images/19.png"))));
+            loginStage.setTitle("FIRMTY");
             loginStage.show();
 
             // Close the current stage (the one with the logout button)

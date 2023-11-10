@@ -33,6 +33,13 @@ public class ClientController implements Initializable {
                         throw new RuntimeException(e);
                     }
                 }
+                case "Suivie" -> {
+                    try {
+                        client_parent.setCenter(Model.getInstance().getViewFactory().getSuivieView());
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
                 // Handle "Accounts" selection
                 case "Accounts" -> {
                     try {

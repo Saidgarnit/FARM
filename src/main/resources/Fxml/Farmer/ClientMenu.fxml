@@ -31,6 +31,13 @@
                </ImageView>
             </graphic>
          </Button>
+         <Button fx:id="Suivie_btn" mnemonicParsing="false" styleClass="alt_menu_btn" text="       Suivre">
+            <graphic>
+               <ImageView fx:id="Suivie_icon" fitHeight="25.0" fitWidth="22.0" style="-fx-max-width: 20px;" styleClass="logout_btn">
+                  <Image url="@../../Images/4.png" />
+               </ImageView>
+            </graphic>
+         </Button>
          <Button fx:id="Suppliers_btn" mnemonicParsing="false" styleClass="alt_menu_btn" text="Vaccination">
             <graphic>
                <ImageView fx:id="Suppliers_icon" fitHeight="25.0" fitWidth="22.0" style="-fx-max-width: 20px;" styleClass="logout_btn">
@@ -48,7 +55,7 @@
          <Button fx:id="Charges_btn" mnemonicParsing="false" styleClass="alt_menu_btn" text="    Charges">
             <graphic>
                <ImageView fx:id="Charges_Icon" fitHeight="25.0" fitWidth="22.0" style="-fx-max-width: 20px;">
-                  <Image url="@../../Images/11.png"/>
+                  <Image url="@../../Images/11.png" />
                </ImageView>
             </graphic>
          </Button>
