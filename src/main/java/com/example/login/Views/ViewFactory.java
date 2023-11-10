@@ -68,17 +68,17 @@ public class ViewFactory {
         return transactionsView;
     }
     public AnchorPane getSuivieView() throws IOException {
-        if (transactionsView == null) {
+        if (SuivieView == null) {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Farmer/Suivie.fxml"));
-                transactionsView = loader.load();
+                SuivieView = loader.load();
             } catch (IOException e) {
                 e.printStackTrace();
                 // You might want to show an error message to the user or handle it appropriately
                 throw e; // Re-throw the exception if you want it to be handled further
             }
         }
-        return transactionsView;
+        return SuivieView;
     }
 
     public AnchorPane getAccountsView() throws IOException {
