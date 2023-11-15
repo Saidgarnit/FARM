@@ -32,6 +32,7 @@ public class DashboardController implements Initializable {
     public Label Vaccination_lbl;
     public Label Production_lbl;
     public ImageView productions_img;
+    public Label saving_bal1;
     @FXML
     private PieChart pieChart;
     @FXML

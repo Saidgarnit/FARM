@@ -19,66 +19,66 @@
       <VBox layoutY="142.0" prefHeight="400.0" prefWidth="160.0" styleClass="menu_container" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="142.0">
          <Button fx:id="dashboard_btn" mnemonicParsing="false" styleClass="alt_menu_btn" text="DashBord">
             <graphic>
-               <ImageView fx:id="dashboard_icon" fitHeight="25.0" fitWidth="22.0" style="-fx-max-width: 20px;" styleClass="logout_btn">
-                  <Image url="@../../Images/5.png" />
+               <ImageView fx:id="dashboard_icon" fitHeight="30.0" fitWidth="29.0" style="-fx-max-width: 30px;" styleClass="logout_btn">
+                  <Image url="@../../Images/home.png" />
                </ImageView>
             </graphic>
          </Button>
          <Button fx:id="Products_btn" mnemonicParsing="false" styleClass="alt_menu_btn" text="Production">
             <graphic>
-               <ImageView fx:id="Products_icon" fitHeight="25.0" fitWidth="22.0" style="-fx-max-width: 20px;" styleClass="logout_btn">
-                  <Image url="@../../Images/4.png" />
+               <ImageView fx:id="Products_icon" fitHeight="30.0" fitWidth="29.0" style="-fx-max-width: 20px;" styleClass="logout_btn">
+                  <Image url="@../../Images/production.png" />
                </ImageView>
             </graphic>
          </Button>
-         <Button fx:id="Suivie_btn" mnemonicParsing="false" styleClass="alt_menu_btn" text="       Suivre">
+         <Button fx:id="Suivie_btn" mnemonicParsing="false" styleClass="alt_menu_btn" text="  Suivre">
             <graphic>
-               <ImageView fx:id="Suivie_icon" fitHeight="25.0" fitWidth="22.0" style="-fx-max-width: 20px;" styleClass="logout_btn">
-                  <Image url="@../../Images/4.png" />
+               <ImageView fx:id="Suivie_icon" fitHeight="30.0" fitWidth="29.0" style="-fx-max-width: 20px;" styleClass="logout_btn">
+                  <Image url="@../../Images/Suivie.png" />
                </ImageView>
             </graphic>
          </Button>
          <Button fx:id="Suppliers_btn" mnemonicParsing="false" styleClass="alt_menu_btn" text="Vaccination">
             <graphic>
-               <ImageView fx:id="Suppliers_icon" fitHeight="25.0" fitWidth="22.0" style="-fx-max-width: 20px;" styleClass="logout_btn">
-                  <Image url="@../../Images/6.png" />
+               <ImageView fx:id="Suppliers_icon" fitHeight="30.0" fitWidth="29.0" style="-fx-max-width: 20px;" styleClass="logout_btn">
+                  <Image url="@../../Images/vaccination.png" />
                </ImageView>
             </graphic>
          </Button>
          <Button fx:id="Employees_btn" mnemonicParsing="false" styleClass="alt_menu_btn" text="Employees">
             <graphic>
-               <ImageView fx:id="Employees_icon" fitHeight="25.0" fitWidth="22.0" style="-fx-max-width: 20px;" styleClass="logout_btn">
-                  <Image url="@../../Images/7.png" />
+               <ImageView fx:id="Employees_icon" fitHeight="30.0" fitWidth="29.0" style="-fx-max-width: 20px;" styleClass="logout_btn">
+                  <Image url="@../../Images/employees.png" />
                </ImageView>
             </graphic>
          </Button>
-         <Button fx:id="Charges_btn" mnemonicParsing="false" styleClass="alt_menu_btn" text="    Charges">
+         <Button fx:id="Charges_btn" mnemonicParsing="false" styleClass="alt_menu_btn" text=" Charges">
             <graphic>
-               <ImageView fx:id="Charges_Icon" fitHeight="25.0" fitWidth="22.0" style="-fx-max-width: 20px;">
-                  <Image url="@../../Images/11.png" />
+               <ImageView fx:id="Charges_Icon" fitHeight="30.0" fitWidth="29.0" style="-fx-max-width: 20px;">
+                  <Image url="@../../Images/charges.png" />
                </ImageView>
             </graphic>
          </Button>
          <Button fx:id="Ventes_btn" mnemonicParsing="false" styleClass="alt_menu_btn" text="      Ventes">
             <graphic>
-               <ImageView fx:id="Ventes_icon" fitHeight="25.0" fitWidth="22.0" style="-fx-max-width: 20px;" styleClass="logout_btn">
-                  <Image url="@../../Images/10.png" />
+               <ImageView fx:id="Ventes_icon" fitHeight="30.0" fitWidth="29.0" style="-fx-max-width: 20px;" styleClass="logout_btn">
+                  <Image url="@../../Images/ventes.png" />
                </ImageView>
             </graphic>
          </Button>
          <Line endX="120.0" />
 
-         <Button fx:id="profil_btn" mnemonicParsing="false" styleClass="alt_menu_btn" text="Profile">
+         <Button fx:id="profil_btn" mnemonicParsing="false" styleClass="alt_menu_btn" text="  Profile">
             <graphic>
-               <ImageView fx:id="profil_icon" fitHeight="25.0" fitWidth="22.0" style="-fx-max-width: 20px;" styleClass="logout_btn">
-                  <Image url="@../../Images/8.png" />
+               <ImageView fx:id="profil_icon" fitHeight="30.0" fitWidth="29.0" style="-fx-max-width: 20px;" styleClass="logout_btn">
+                  <Image url="@../../Images/profile.png" />
                </ImageView>
             </graphic>
          </Button>
          <Button fx:id="logout_btn" mnemonicParsing="false" onMouseClicked="#logout" prefWidth="150.0" styleClass="alt_menu_btn" text="Logout">
             <graphic>
-               <ImageView fx:id="logou_icon" fitHeight="25.0" fitWidth="22.0" style="-fx-max-width: 20px;" styleClass="logout_btn">
-                  <Image url="@../../Images/3.png" />
+               <ImageView fx:id="logou_icon" fitHeight="30.0" fitWidth="29.0" style="-fx-max-width: 20px;" styleClass="logout_btn">
+                  <Image url="@../../Images/Logout.png" />
                </ImageView>
             </graphic>
          </Button>
