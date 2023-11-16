@@ -8,11 +8,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Optional;
 
 public class ViewFactory {
     private  AnchorPane LogoutView;
@@ -154,19 +157,22 @@ public class ViewFactory {
 
 
     public void showLoginWindow() throws IOException {
-        FXMLLoader Loader = new FXMLLoader(getClass().getResource("/Fxml/Login.fxml"));
-        //  FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Login.fxml"));
-        createStage(Loader);
-    }
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Login.fxml"));
+        Stage loginStage = createStage(loader);
 
-    private void createStage(FXMLLoader loader) throws IOException {
+        // Set confirmation dialog for closing the login stage
+        setConfirmationOnClose(loginStage);
+
+        loginStage.show();
+    }
+    private Stage createStage(FXMLLoader loader) throws IOException {
         Scene scene = new Scene(loader.load());
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.getIcons().add(new Image(String.valueOf(getClass().getResource("/Images/19.gif"))));
         stage.setResizable(false);
         stage.setTitle("FIRMTY"); // Set the window title here
-        stage.show();
+        return stage;
     }
 
 
@@ -200,16 +206,37 @@ public class ViewFactory {
     }
 
 
+    public void setConfirmationOnClose(Stage stage) {
+        // Handle window close request for any given stage
+        stage.setOnCloseRequest(event -> {
+            event.consume(); // Consume the event to prevent immediate window closure
+
+            // Show confirmation alert
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Confirmation");
+            alert.setHeaderText("Do you want to exit?");
+            alert.setContentText("Are you sure you want to exit?");
+
+            // Customizing buttons in the alert
+            ButtonType exitButton = new ButtonType("Exit");
+            ButtonType cancelButton = new ButtonType("Cancel");
+
+            alert.getButtonTypes().setAll(exitButton, cancelButton);
+
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.isPresent() && result.get() == exitButton) {
+                // If 'Exit' button is clicked, close the stage
+                closeStage(stage);
+            }
+            // If 'Cancel' or close button of the alert is clicked, do nothing (continue running)
+        });
+    }
 
     public void closeStage(Stage stage) {
         if (stage != null) {
             stage.close();
         }
     }
-
-
-
-
 }
 
 
