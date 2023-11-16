@@ -1,0 +1,31 @@
+
+.tableview .column-header-background{
+    -fx-background-color: #99e567;
+    -fx-background-insets: 0 0  0 0 ;
+
+}
+.tableview .column-header, .tableview .filler{
+    -fx-font-size: 13px;
+    -fx-border-width: 0 0  0 0 ;
+    -fx-background-color:transparent ;
+}
+.btnad {
+    -fx-background-color: #4CAF50; /* Green background */
+    -fx-text-fill: white; /* White text */
+    -fx-font-size: 14px; /* Font size */
+    -fx-padding: 10px 20px; /* Padding */
+}
+.btnad{
+    -fx-background-color: #45a049; /* Darker green background on hover */
+}
+
+
+.styled-textfield {
+    -fx-padding: 10px;
+    -fx-border-color: #163b02;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+}
+
+
+

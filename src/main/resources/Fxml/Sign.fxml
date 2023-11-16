@@ -35,8 +35,8 @@
                 <Insets left="90.0" top="30.0" />
             </HBox.margin>
         </Label>
-        <Hyperlink fx:id="Signin"  onAction="#LoginAction" styleClass="Label" text="SignIn">
-            <HBox.margin>
+        <Hyperlink fx:id="Signin" onAction="#LoginAction" styleClass="Label" text="SignIn">
+        <HBox.margin>
                 <Insets top="30.0" />
             </HBox.margin>
         </Hyperlink>

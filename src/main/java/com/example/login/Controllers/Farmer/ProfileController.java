@@ -241,6 +241,7 @@ public class ProfileController implements Initializable {
                 if (rowsUpdated > 0) {
                     // Update was successful
                     System.out.println("Admin profile updated successfully.");
+                    DashboardController.getInstance().updateFullName(newName);
                     adminProfile.setFullName(newName);
                     adminProfile.setEmail(newEmail);
                     adminProfile.setTelephone(newTele);

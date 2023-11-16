@@ -49,7 +49,7 @@
          <Label fx:id="saving_bal1" layoutX="22.0" layoutY="36.0" styleClass="account_balance" text="Vaccinations" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="25.0" />
          <Label fx:id="Vaccination_lbl" layoutX="224.0" layoutY="127.0" styleClass="account_num" text="44" AnchorPane.bottomAnchor="7.400000000000006" AnchorPane.leftAnchor="224.0" />
          <Label layoutX="14.0" layoutY="143.0" styleClass="account_number" text="Numbers of Vaccinations" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" />
-         <ImageView fitHeight="76.0" fitWidth="83.0" layoutX="205.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <ImageView fitHeight="87.0" fitWidth="76.0" layoutX="198.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
             <Image url="@../../Images/injection.png" />
          </ImageView>
       </AnchorPane>
