@@ -1,6 +1,6 @@
 package com.example.login.Controllers.Farmer;
 
-import com.example.login.JbdcJava;
+import com.example.login.JBDC;
 import com.example.login.Models.Admin;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -21,8 +21,6 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
-
-import static javafx.scene.image.Image.*;
 
 public class ProfileController implements Initializable {
 
@@ -53,7 +51,7 @@ public class ProfileController implements Initializable {
     @Override
     
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        dbConnection = JbdcJava.connect();
+        dbConnection = JBDC.connect();
         String loggedInAdminEmail = SessionManager.getInstance().getLoggedInAdminEmail();
 
         if (loggedInAdminEmail != null) {

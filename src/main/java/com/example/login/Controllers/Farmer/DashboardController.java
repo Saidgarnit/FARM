@@ -1,6 +1,6 @@
 package com.example.login.Controllers.Farmer;
 
-import com.example.login.JbdcJava;
+import com.example.login.JBDC;
 import com.example.login.SessionManager;
 import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
@@ -70,7 +70,7 @@ public class DashboardController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         instance = this;
-        try (Connection connection = JbdcJava.connect()) {
+        try (Connection connection = JBDC.connect()) {
             String loggedInAdminEmail = SessionManager.getInstance().getLoggedInAdminEmail();
 
             if (loggedInAdminEmail != null) {

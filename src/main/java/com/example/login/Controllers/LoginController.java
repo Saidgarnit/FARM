@@ -1,7 +1,8 @@
 package com.example.login.Controllers;
 import com.example.login.SessionManager; // Adjust the package name as needed
 
-import com.example.login.JbdcJava;
+import com.example.login.JBDC;
+import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -36,7 +37,7 @@ public class LoginController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        dbConnection = JbdcJava.connect();
+        dbConnection = JBDC.connect();
     }
 
     @FXML
@@ -47,12 +48,30 @@ public class LoginController implements Initializable {
 
         if (enteredEmail.isEmpty() || enteredPassword.isEmpty()) {
             showLoginErrorAlert("Please enter both email and password.");
-        } else if (dbConnection != null && isValidLogin(enteredEmail, enteredPassword)) {
-            // Set the logged-in admin's email in the session
-            SessionManager.getInstance().setLoggedInAdminEmail(enteredEmail);
-            openClientScreen(event);
         } else {
-            showLoginErrorAlert("Incorrect email or password. Please try again.");
+            Task<Boolean> verifyDataTask = new Task<>() {
+                @Override
+                protected Boolean call() throws Exception {
+                    return isValidLogin(enteredEmail, enteredPassword);
+                }
+            };
+
+            verifyDataTask.setOnSucceeded(e -> {
+                boolean isValid = verifyDataTask.getValue();
+                if (isValid) {
+                    SessionManager.getInstance().setLoggedInAdminEmail(enteredEmail);
+                    try {
+                        openClientScreen(event);
+                    } catch (IOException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                } else {
+                    showLoginErrorAlert("Incorrect email or password. Please try again.");
+                }
+            });
+
+            Thread verifyDataThread = new Thread(verifyDataTask);
+            verifyDataThread.start();
         }
     }
 

@@ -5,45 +5,44 @@ import com.example.login.Views.ViewFactory;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
+
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.SQLException;
 
 public class App extends Application {
 
-    private JbdcJava dbConnection;
+    private JBDC dbConnection;
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        // Test the database connection
-        testDatabaseConnection();
+        // Test the database connection asynchronously in a separate thread
+        MyThread testConnectionThread = new MyThread();
+        testConnectionThread.start();
 
         // Initialize the Model and ViewFactory
         Model model = Model.getInstance();
         ViewFactory viewFactory = model.getViewFactory();
 
         // Create an instance of JbdcJava and establish the database connection
-        dbConnection = new JbdcJava();
+        dbConnection = new JBDC();
 
         // Show the login window
-        viewFactory.showLoginWindow();
-    }
+        viewFactory.showClientWindow();
 
-    private void testDatabaseConnection() {
-        // Test the database connection here
-        Connection connection = JbdcJava.connect();
-        if (connection != null) {
-            System.out.println("Connection established successfully!");
-            // Close the connection after testing
-            try {
-                connection.close();
-                System.out.println("");
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+//        // Call the method to retrieve admin records
+        JBDC.getAllAdminRecords();
+
+        // Wait for the thread to complete
+        try {
+            testConnectionThread.join(); // Wait for the thread to finish
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        // Check the status of the thread
+        if (testConnectionThread.isConnectionSuccessful()) {
+            System.out.println("Thread successfully established the connection!");
         } else {
-            System.out.println("Failed to establish connection!");
-            // You might want to handle this failure accordingly
+            System.out.println("Thread failed to establish the connection!");
         }
     }
 

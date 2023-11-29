@@ -1,6 +1,6 @@
 package com.example.login.Controllers;
 
-import com.example.login.JbdcJava;
+import com.example.login.JBDC;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -49,7 +49,7 @@ public class SignUpController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        dbConnection = JbdcJava.connect();
+        dbConnection = JBDC.connect();
 
         // Add event listeners for email and password fields
         email_fld.textProperty().addListener((observable, oldValue, newValue) -> validateEmailInput(newValue));
