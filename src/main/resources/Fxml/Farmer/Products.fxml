@@ -9,12 +9,14 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.login.Controllers.Farmer.ProductsController">
    <children>
       <AnchorPane layoutX="2.0" layoutY="1.0" prefHeight="125.0" prefWidth="950.0" style="-fx-background-color: #1f481f;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -23,7 +25,7 @@
                   <Font name="Segoe UI Semibold" size="35.0" />
                </font>
             </Text>
-            <Text fill="#fffdfd" layoutX="758.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Today 12/10/2023" wrappingWidth="177.3546028137207" AnchorPane.rightAnchor="14.645397186279297" AnchorPane.topAnchor="49.576171875">
+            <Text fx:id="login_date" fill="#fffdfd" layoutX="758.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="177.3546028137207" AnchorPane.rightAnchor="14.645397186279297" AnchorPane.topAnchor="49.576171875">
                <font>
                   <Font size="18.0" />
                </font>
@@ -43,12 +45,12 @@
                         <TableColumn fx:id="idqantitefinale" prefWidth="85.02862548828125" text="Qantite_Finale" />
                         <TableColumn fx:id="idprix" prefWidth="72.22860717773438" text="Prix" />
                         <TableColumn fx:id="iddateentre" prefWidth="100.5714111328125" text="Date_dentre" />
-                        <TableColumn fx:id="idorigine" prefWidth="83.2000732421875" text="origine" />
-                        <TableColumn fx:id="idnomemploye" prefWidth="120.6856689453125" text="Nom_de_lemploye" />
+                        <TableColumn fx:id="idorigine" prefWidth="122.51422119140625" text="origine" />
+                        <TableColumn fx:id="idnomemploye" prefWidth="82.2857666015625" text="Nom_de_lemploye" />
                         <TableColumn fx:id="idnomfournisseur" prefWidth="154.5142822265625" text="Nom_de_fournisseur" />
                     </columns>
                   </TableView>
-                  <TextField fx:id="idserch" layoutX="3.0" layoutY="14.0" prefHeight="30.0" prefWidth="357.0" promptText="Seach" styleClass="styled-textfield" stylesheets="@../../Styles/Productionstyle.css" AnchorPane.leftAnchor="3.0" AnchorPane.topAnchor="5.0" />
+                  <TextField fx:id="idserch" layoutX="3.0" layoutY="14.0" prefHeight="41.0" prefWidth="255.0" promptText="Seach" styleClass="styled-textfield" stylesheets="@../../Styles/Productionstyle.css" AnchorPane.leftAnchor="3.0" AnchorPane.topAnchor="5.0" />
                   <Line endX="839.857177734375" endY="-3.0517578125E-5" layoutX="101.0" layoutY="431.0" startX="-100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
                   <TextField fx:id="idlabelnomrace" layoutX="17.0" layoutY="461.0" prefHeight="26.0" prefWidth="261.0" promptText="Nom_De_Race" styleClass="styled-textfield" stylesheets="@../../Styles/Productionstyle.css" />
                   <TextField fx:id="idlebelmetrage" layoutX="17.0" layoutY="525.0" prefHeight="26.0" prefWidth="261.0" promptText="Metrage" styleClass="styled-textfield" stylesheets="@../../Styles/Productionstyle.css" />
@@ -77,9 +79,30 @@
                   <TextField fx:id="idlebelorigine" layoutX="646.0" layoutY="461.0" prefHeight="26.0" prefWidth="261.0" promptText="origine" styleClass="styled-textfield" stylesheets="@../../Styles/Productionstyle.css" />
                   <ComboBox fx:id="idlebelnomemploye" layoutX="647.0" layoutY="526.0" prefHeight="26.0" prefWidth="261.0" promptText="Nom_de_lemploye" styleClass="styled-textfield" stylesheets="@../../Styles/Productionstyle.css" />
                   <TextField fx:id="idlebelnomfournisseur" layoutX="647.0" layoutY="590.0" prefHeight="26.0" prefWidth="261.0" promptText="Nom_de_fournisseur" styleClass="styled-textfield" stylesheets="@../../Styles/Productionstyle.css" />
-                  <Button fx:id="idbuttadd" layoutX="278.0" layoutY="661.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="158.0" styleClass="btnad" stylesheets="@../../Styles/Productionstyle.css" text="Button" />
-                  <Button fx:id="idbuttref" layoutX="502.0" layoutY="662.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="175.0" styleClass="btnad" stylesheets="@../../Styles/Productionstyle.css" text="Button" />
-                  <Button fx:id="idbuttmodife" layoutX="726.0" layoutY="661.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="169.0" styleClass="btnad" stylesheets="@../../Styles/Productionstyle.css" text="Button" />
+                  <Button fx:id="idbuttadd" layoutX="353.0" layoutY="652.0" mnemonicParsing="false" onAction="#Add" prefHeight="26.0" prefWidth="158.0" styleClass="btnad" stylesheets="@../../Styles/Productionstyle.css" text="APP" />
+                  <Button fx:id="idbuttref" layoutX="548.0" layoutY="652.0" mnemonicParsing="false" onAction="#delet" prefHeight="26.0" prefWidth="158.0" styleClass="btnad" stylesheets="@../../Styles/Productionstyle.css" text="Supp" />
+                  <Button fx:id="idbuttmodife" layoutX="740.0" layoutY="652.0" mnemonicParsing="false" onAction="#updat" prefHeight="26.0" prefWidth="158.0" styleClass="btnad" stylesheets="@../../Styles/Productionstyle.css" text="Upp" />
+                  <Button fx:id="searchbtn" layoutX="265.0" layoutY="5.0" mnemonicParsing="false" onAction="#searche" prefHeight="41.0" prefWidth="119.0" styleClass="btnad" stylesheets="@../../Styles/Productionstyle.css" text="search" />
+                  <ImageView fitHeight="24.0" fitWidth="21.0" layoutX="278.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/search_icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="17.0" fitWidth="99.0" layoutX="363.0" layoutY="664.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/add.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="31.0" layoutX="556.0" layoutY="661.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/delete.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="52.0" layoutX="751.0" layoutY="661.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/refresh.png" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
          </children>

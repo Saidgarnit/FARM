@@ -1,19 +1,36 @@
 package com.example.login.Models;
 
-import java.time.LocalDate;
-
 public class Production {
+    private int id ;
+
     private int metrage;
     private String Nom_de_race;
     private String Quantite;
     private String Qantite_Finale;
     private double Prix;
-    private LocalDate Date_dentre;
+    private String Date_dentre;
     private String Nom_de_lemploye;
     private String Nom_de_fournisseur;
     private String origine;
 
-    public Production(int metrage, String nom_de_race, String quantite, String qantite_Finale, double prix, LocalDate date_dentre, String nom_de_lemploye, String nom_de_fournisseur, String origine) {
+    public Production() {
+    }
+
+    public Production(int id, int metrage, String nom_de_race, String quantite, String qantite_Finale, double prix, String date_dentre, String nom_de_lemploye, String nom_de_fournisseur, String origine) {
+        this.id = id;
+        this.metrage = metrage;
+        this.Nom_de_race = nom_de_race;
+        this.Quantite = quantite;
+        this.Qantite_Finale = qantite_Finale;
+        this.Prix = prix;
+        this.Date_dentre = date_dentre;
+        this.Nom_de_lemploye = nom_de_lemploye;
+        this.Nom_de_fournisseur = nom_de_fournisseur;
+        this.origine = origine;
+
+    }
+
+    public Production(int metrage, String nom_de_race, String quantite, String qantite_Finale, double prix, String date_dentre, String nom_de_lemploye, String nom_de_fournisseur, String origine) {
         this.metrage = metrage;
         this.Nom_de_race = nom_de_race;
         this.Quantite = quantite;
@@ -25,8 +42,17 @@ public class Production {
         this.origine = origine;
     }
 
-    public int getMetrage() {
-        return metrage;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getMetrage() {
+        return String.valueOf(metrage);
     }
 
     public void setMetrage(int metrage) {
@@ -57,19 +83,19 @@ public class Production {
         Qantite_Finale = qantite_Finale;
     }
 
-    public double getPrix() {
-        return Prix;
+    public String getPrix() {
+        return String.valueOf(Prix);
     }
 
     public void setPrix(double prix) {
         Prix = prix;
     }
 
-    public LocalDate getDate_dentre() {
+    public String getDate_dentre() {
         return Date_dentre;
     }
 
-    public void setDate_dentre(LocalDate date_dentre) {
+    public void setDate_dentre(String date_dentre) {
         Date_dentre = date_dentre;
     }
 
