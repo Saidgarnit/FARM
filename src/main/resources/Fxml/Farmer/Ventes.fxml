@@ -4,7 +4,6 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -18,7 +17,7 @@
    <children>
       <AnchorPane layoutX="2.0" layoutY="1.0" prefHeight="125.0" prefWidth="950.0" style="-fx-background-color: #1f481f;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Text fill="#f4f4f4" layoutX="53.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Production">
+            <Text fill="#f4f4f4" layoutX="53.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ventes">
                <font>
                   <Font name="Segoe UI Semibold" size="35.0" />
                </font>
@@ -36,34 +35,28 @@
                <children>
                   <TableView fx:id="idtableview" layoutX="13.0" layoutY="52.114285714285714" prefHeight="369.0" prefWidth="925.0" styleClass="tableview" stylesheets="@../../Styles/Productionstyle.css" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="52.0">
                     <columns>
-                      <TableColumn fx:id="idrace" prefWidth="52.114294826984406" text="ID" />
-                      <TableColumn fx:id="idnomrace" prefWidth="99.65715408325195" text="Nom_De_Race" />
-                        <TableColumn fx:id="idmetrage" prefWidth="81.37139892578125" text="Metrage" />
-                        <TableColumn fx:id="idqantite" prefWidth="79.54290771484375" text="Quantite" />
-                        <TableColumn fx:id="idqantitefinale" prefWidth="85.02862548828125" text="Qantite_Finale" />
-                        <TableColumn fx:id="idprix" prefWidth="72.22860717773438" text="Prix" />
-                        <TableColumn fx:id="iddateentre" prefWidth="100.5714111328125" text="Date_dentre" />
-                        <TableColumn fx:id="idorigine" prefWidth="83.2000732421875" text="origine" />
-                        <TableColumn fx:id="idnomemploye" prefWidth="120.6856689453125" text="Nom_de_lemploye" />
-                        <TableColumn fx:id="idnomfournisseur" prefWidth="154.5142822265625" text="Nom_de_fournisseur" />
+                      <TableColumn fx:id="idrace" prefWidth="70.39999383687973" text="ID" />
+                      <TableColumn fx:id="idnomrace" prefWidth="261.6000061035156" text="Nom_De_Product" />
+                        <TableColumn fx:id="idqantite" prefWidth="283.99993896484375" text="Quantite" />
+                        <TableColumn fx:id="idprix" prefWidth="66.40008544921875" text="Prix" />
+                        <TableColumn fx:id="iddateentre" prefWidth="124.0" text="Date_Ventre" />
+                        <TableColumn fx:id="iddateentre1" prefWidth="124.0" text="Client" />
                     </columns>
                   </TableView>
                   <TextField fx:id="idserch" layoutX="3.0" layoutY="14.0" prefHeight="30.0" prefWidth="357.0" promptText="Seach" styleClass="styled-textfield" stylesheets="@../../Styles/Productionstyle.css" AnchorPane.leftAnchor="3.0" AnchorPane.topAnchor="5.0" />
                   <Line endX="839.857177734375" endY="-3.0517578125E-5" layoutX="101.0" layoutY="431.0" startX="-100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                  <TextField fx:id="idlabelnomrace" layoutX="17.0" layoutY="461.0" prefHeight="26.0" prefWidth="261.0" promptText="Nom_De_Race" styleClass="styled-textfield" stylesheets="@../../Styles/Productionstyle.css" />
-                  <TextField fx:id="idlebelmetrage" layoutX="17.0" layoutY="525.0" prefHeight="26.0" prefWidth="261.0" promptText="Metrage" styleClass="styled-textfield" stylesheets="@../../Styles/Productionstyle.css" />
-                  <TextField fx:id="idlebelqantite" layoutX="17.0" layoutY="590.0" prefHeight="26.0" prefWidth="261.0" promptText="Quantite" styleClass="styled-textfield" stylesheets="@../../Styles/Productionstyle.css" />
-                  <TextField fx:id="idlebelqantitefinale" layoutX="330.0" layoutY="461.0" prefHeight="26.0" prefWidth="261.0" promptText="Qantite_Finale" styleClass="styled-textfield">
+                  <TextField fx:id="idlabelnomrace" layoutX="17.0" layoutY="461.0" prefHeight="26.0" prefWidth="261.0" promptText="Nom_De_Product" styleClass="styled-textfield" stylesheets="@../../Styles/Productionstyle.css" />
+                  <TextField fx:id="idlebelqantitefinale" layoutX="658.0" layoutY="461.0" prefHeight="26.0" prefWidth="261.0" promptText="Quantite" styleClass="styled-textfield">
                      <stylesheets>
                         <URL value="@../../Styles/Styles/Productionstyle.css" />
                         <URL value="@../../Styles/Productionstyle.css" />
                      </stylesheets></TextField>
-                  <TextField fx:id="idlebelprix" layoutX="330.0" layoutY="525.0" prefHeight="26.0" prefWidth="261.0" promptText="Prix" styleClass="styled-textfield">
+                  <TextField fx:id="idlebelprix" layoutX="339.0" layoutY="461.0" prefHeight="26.0" prefWidth="261.0" promptText="Prix" styleClass="styled-textfield">
                      <stylesheets>
                         <URL value="@../../Styles/Styles/Productionstyle.css" />
                         <URL value="@../../Styles/Productionstyle.css" />
                      </stylesheets></TextField>
-                  <DatePicker fx:id="idlebeldateentre" layoutX="330.0" layoutY="586.0" prefHeight="26.0" prefWidth="261.0" promptText="Date_dentre" showWeekNumbers="true" styleClass="styled-textfield">
+                  <DatePicker fx:id="idlebeldateentre" layoutX="17.0" layoutY="586.0" prefHeight="26.0" prefWidth="261.0" promptText="Date_dentre" showWeekNumbers="true" styleClass="styled-textfield">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -74,12 +67,16 @@
                         <URL value="@../../Styles/Styles/Productionstyle.css" />
                         <URL value="@../../Styles/Productionstyle.css" />
                      </stylesheets></DatePicker>
-                  <TextField fx:id="idlebelorigine" layoutX="646.0" layoutY="461.0" prefHeight="26.0" prefWidth="261.0" promptText="origine" styleClass="styled-textfield" stylesheets="@../../Styles/Productionstyle.css" />
-                  <ComboBox fx:id="idlebelnomemploye" layoutX="647.0" layoutY="526.0" prefHeight="26.0" prefWidth="261.0" promptText="Nom_de_lemploye" styleClass="styled-textfield" stylesheets="@../../Styles/Productionstyle.css" />
-                  <TextField fx:id="idlebelnomfournisseur" layoutX="647.0" layoutY="590.0" prefHeight="26.0" prefWidth="261.0" promptText="Nom_de_fournisseur" styleClass="styled-textfield" stylesheets="@../../Styles/Productionstyle.css" />
-                  <Button fx:id="idbuttadd" layoutX="278.0" layoutY="661.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="158.0" styleClass="btnad" stylesheets="@../../Styles/Productionstyle.css" text="Button" />
-                  <Button fx:id="idbuttref" layoutX="502.0" layoutY="662.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="175.0" styleClass="btnad" stylesheets="@../../Styles/Productionstyle.css" text="Button" />
-                  <Button fx:id="idbuttmodife" layoutX="726.0" layoutY="661.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="169.0" styleClass="btnad" stylesheets="@../../Styles/Productionstyle.css" text="Button" />
+                  <TextField fx:id="idlebelnomfournisseur" layoutX="658.0" layoutY="586.0" prefHeight="26.0" prefWidth="261.0" promptText="Date_Ventre" styleClass="styled-textfield" stylesheets="@../../Styles/Productionstyle.css" />
+                  <Button fx:id="idbuttadd" layoutX="278.0" layoutY="661.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="158.0" styleClass="btnad" stylesheets="@../../Styles/Productionstyle.css" text="add" />
+                  <Button fx:id="idbuttref" layoutX="502.0" layoutY="662.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="175.0" styleClass="btnad" stylesheets="@../../Styles/Productionstyle.css" text="edit" />
+                  <Button fx:id="idbuttmodife" layoutX="726.0" layoutY="661.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="169.0" styleClass="btnad" stylesheets="@../../Styles/Productionstyle.css" text="Delete" />
+                  <TextField fx:id="idlebelprix1" layoutX="339.0" layoutY="590.0" prefHeight="26.0" prefWidth="261.0" promptText="Client" styleClass="styled-textfield">
+                     <stylesheets>
+                        <URL value="@../../Styles/Styles/Productionstyle.css" />
+                        <URL value="@../../Styles/Productionstyle.css" />
+                     </stylesheets>
+                  </TextField>
                </children>
             </AnchorPane>
          </children>
