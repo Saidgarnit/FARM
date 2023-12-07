@@ -26,10 +26,10 @@ public class App extends Application {
         dbConnection = new JBDC();
 
         // Show the login window
-        viewFactory.showClientWindow();
+        viewFactory.showLoginWindow();
 
 //        // Call the method to retrieve admin records
-        JBDC.getAllAdminRecords();
+      JBDC.getAllAdminRecords();
 
         // Wait for the thread to complete
         try {
