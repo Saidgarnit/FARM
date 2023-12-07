@@ -138,7 +138,7 @@ CREATE TABLE `ventes` (
   `Quantite` varchar(20) NOT NULL,
   `Prix` varchar(20) NOT NULL,
   `Date_Ventre` varchar(10) NOT NULL,
-  `Client` varchar(20) NOT NULL,
+  `Client` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Déchargement des données de la table `ventes`

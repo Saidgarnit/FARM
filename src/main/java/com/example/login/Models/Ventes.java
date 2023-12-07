@@ -10,6 +10,7 @@ public class Ventes {
 
     public Ventes() {
     }
+    
 
     public Ventes(int id, String nomDeProduct, String quantite, double prix, String dateVentre, String client) {
         this.id = id;

@@ -9,7 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class YourControllerClass {
+public class ventesController implements Initializable {
 
     @FXML
     private TableView<YourDataModelClass> idtableview;
@@ -31,8 +31,8 @@ public class YourControllerClass {
 
     // Establish database connection
     private static final String JDBC_URL = "jdbc:mysql://localhost:3306/myprojectjavafx";
-    private static final String JDBC_USER = "your_username";
-    private static final String JDBC_PASSWORD = "your_password";
+    private static final String JDBC_USER = "root";
+    private static final String JDBC_PASSWORD = "";
 
     @FXML
     void initialize() {
