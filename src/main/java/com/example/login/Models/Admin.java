@@ -11,8 +11,9 @@ public class Admin {
     private LocalDate dateOfBirth;
     private int Age;
     private String Image;
+    private String Ntele;
 
-    public Admin(String fullName, String email, String telephone, int age, LocalDate dateOfBirth, String password, String image) {
+    public Admin(String fullName, String email, String telephone, int age ,LocalDate dateOfBirth, String password, String image) {
         this.fullName = fullName;
         this.email = email;
         this.telephone = telephone;
@@ -88,5 +89,13 @@ public class Admin {
 
     public void setImagePath(String newImagePath) {
         this.Image = newImagePath;
+    }
+
+    public String getNtele() {
+        return Ntele;
+    }
+
+    public void setNtele(String ntele) {
+        this.Ntele = ntele;
     }
 }

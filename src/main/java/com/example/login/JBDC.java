@@ -32,7 +32,7 @@ public class JBDC {
     }
 
     // Method to retrieve all records from the admin table
-    /*
+
     public static void getAllAdminRecords() {
         try {
             Connection con = connect();
@@ -67,6 +67,6 @@ public class JBDC {
             // Handle exceptions here
         }
     }
-*/
+
 }
 
