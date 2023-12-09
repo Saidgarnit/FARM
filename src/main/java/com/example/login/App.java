@@ -26,7 +26,7 @@ public class App extends Application {
         dbConnection = new JBDC();
 
         // Show the login window
-        viewFactory.showLoginWindow();
+        viewFactory.showClientWindow();
 
 //        // Call the method to retrieve admin records
       JBDC.getAllAdminRecords();
