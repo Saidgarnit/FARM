@@ -8,102 +8,89 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" fx:controller="com.example.login.Controllers.Farmer."
-            prefWidth="950.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
-   <AnchorPane layoutX="2.0" layoutY="1.0" prefHeight="125.0" prefWidth="950.0" style="-fx-background-color: #1f481f;"
-               AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.login.Controllers.Farmer.VentesController">
+   <AnchorPane layoutY="-11.0" prefHeight="92.0" prefWidth="950.0" style="-fx-background-color: #1f481f;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-11.0">
       <Text fill="#f4f4f4" layoutX="53.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ventes">
          <font>
-            <Font name="Segoe UI Semibold" size="35.0"/>
+            <Font name="Segoe UI Semibold" size="35.0" />
          </font>
       </Text>
-      <Text fill="#fffdfd" layoutX="758.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0"
-            text="Today 12/10/2023" wrappingWidth="177.3546028137207" AnchorPane.rightAnchor="14.645397186279297"
-            AnchorPane.topAnchor="49.576171875">
+      <Text fill="#fffdfd" layoutX="758.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Today 12/10/2023" wrappingWidth="177.3546028137207" AnchorPane.rightAnchor="14.645397186279297" AnchorPane.topAnchor="49.576171875">
          <font>
-            <Font size="18.0"/>
+            <Font size="18.0" />
          </font>
       </Text>
    </AnchorPane>
-   <AnchorPane layoutY="136.0" prefHeight="714.0" prefWidth="954.0" styleClass="white-bg"
-               stylesheets="@../../Styles/Styles/Productionstyle.css" AnchorPane.bottomAnchor="5.0"
-               AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
-      <AnchorPane layoutX="21.02857142857143" prefHeight="714.0" prefWidth="941.0"
-                  style="-fx-background-color: #F5F7F8;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
-                  AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <TableView fx:id="idtableview" layoutX="13.0" layoutY="52.114285714285714" prefHeight="369.0"
-                       prefWidth="925.0" styleClass="tableview" stylesheets="@../../Styles/Productionstyle.css"
-                       AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="52.0">
-               <columns>
-                  <TableColumn fx:id="idrace" prefWidth="70.39999383687973" text="ID"/>
-                  <TableColumn fx:id="idnomrace" prefWidth="261.6000061035156" text="Nom_De_Product"/>
-                  <TableColumn fx:id="idqantite" prefWidth="283.99993896484375" text="Quantite"/>
-                  <TableColumn fx:id="idprix" prefWidth="66.40008544921875" text="Prix"/>
-                  <TableColumn fx:id="iddateentre" prefWidth="124.0" text="Date_Ventre"/>
-                  <TableColumn fx:id="iddateentre1" prefWidth="124.0" text="Client"/>
-               </columns>
-            </TableView>
-            <TextField fx:id="idserch" layoutX="3.0" layoutY="14.0" prefHeight="30.0" prefWidth="357.0"
-                       promptText="Seach" styleClass="styled-textfield"
-                       stylesheets="@../../Styles/Productionstyle.css" AnchorPane.leftAnchor="3.0"
-                       AnchorPane.topAnchor="5.0"/>
-            <Line endX="839.857177734375" endY="-3.0517578125E-5" layoutX="101.0" layoutY="431.0" startX="-100.0"
-                  AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"/>
-            <TextField fx:id="idlabelnomrace" layoutX="17.0" layoutY="461.0" prefHeight="26.0" prefWidth="261.0"
-                       promptText="Nom_De_Product" styleClass="styled-textfield"
-                       stylesheets="@../../Styles/Productionstyle.css"/>
-            <TextField fx:id="idlebelqantitefinale" layoutX="658.0" layoutY="461.0" prefHeight="26.0"
-                       prefWidth="261.0" promptText="Quantite" styleClass="styled-textfield">
-               <stylesheets>
-                  <URL value="@../../Styles/Styles/Productionstyle.css"/>
-                  <URL value="@../../Styles/Productionstyle.css"/>
-               </stylesheets>
-            </TextField>
-            <TextField fx:id="idlebelprix" layoutX="339.0" layoutY="461.0" prefHeight="26.0" prefWidth="261.0"
-                       promptText="Prix" styleClass="styled-textfield">
-               <stylesheets>
-                  <URL value="@../../Styles/Styles/Productionstyle.css"/>
-                  <URL value="@../../Styles/Productionstyle.css"/>
-               </stylesheets>
-            </TextField>
-            <DatePicker fx:id="idlebeldateentre" layoutX="17.0" layoutY="586.0" prefHeight="26.0" prefWidth="261.0"
-                        promptText="Date_dentre" showWeekNumbers="true" styleClass="styled-textfield">
-               <opaqueInsets>
-                  <Insets/>
-               </opaqueInsets>
-               <cursor>
-                  <Cursor fx:constant="MOVE"/>
-               </cursor>
-               <stylesheets>
-                  <URL value="@../../Styles/Styles/Productionstyle.css"/>
-                  <URL value="@../../Styles/Productionstyle.css"/>
-               </stylesheets>
-            </DatePicker>
-            <TextField fx:id="idlebelnomfournisseur" layoutX="658.0" layoutY="586.0" prefHeight="26.0"
-                       prefWidth="261.0" promptText="Date_Ventre" styleClass="styled-textfield"
-                       stylesheets="@../../Styles/Productionstyle.css"/>
-            <Button fx:id="idbuttadd" layoutX="278.0" layoutY="661.0" mnemonicParsing="false" prefHeight="26.0"
-                    prefWidth="158.0" styleClass="btnad" stylesheets="@../../Styles/Productionstyle.css" text="add"/>
-            <Button fx:id="idbuttref" layoutX="502.0" layoutY="662.0" mnemonicParsing="false" prefHeight="26.0"
-                    prefWidth="175.0" styleClass="btnad" stylesheets="@../../Styles/Productionstyle.css"
-                    text="edit"/>
-            <Button fx:id="idbuttmodife" layoutX="726.0" layoutY="661.0" mnemonicParsing="false" prefHeight="26.0"
-                    prefWidth="169.0" styleClass="btnad" stylesheets="@../../Styles/Productionstyle.css"
-                    text="Delete"/>
-            <TextField fx:id="idlebelprix1" layoutX="339.0" layoutY="590.0" prefHeight="26.0" prefWidth="261.0"
-                       promptText="Client" styleClass="styled-textfield">
-               <stylesheets>
-                  <URL value="@../../Styles/Styles/Productionstyle.css"/>
-                  <URL value="@../../Styles/Productionstyle.css"/>
-               </stylesheets>
-            </TextField>
-         </children>
+   <AnchorPane layoutY="136.0" prefHeight="714.0" prefWidth="954.0" styleClass="white-bg" stylesheets="@../../Styles/Styles/Productionstyle.css" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+      <AnchorPane layoutY="-30.0" prefHeight="743.0" prefWidth="940.0" style="-fx-background-color: #F5F7F8;" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-30.0">
+         <TableView fx:id="idtableview" layoutX="6.0" layoutY="50.0" prefHeight="478.0" prefWidth="929.0" styleClass="tableview" stylesheets="@../../Styles/Productionstyle.css" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="50.0">
+              <columns>
+               <TableColumn fx:id="id" prefWidth="70.39999383687973" text="ID" />
+               <TableColumn fx:id="idNomDeProduct" prefWidth="261.6000061035156" text="Nom_De_Product" />
+               <TableColumn fx:id="idQuantite" prefWidth="283.99993896484375" text="Quantite" />
+               <TableColumn fx:id="idPrix" prefWidth="66.40008544921875" text="Prix" />
+               <TableColumn fx:id="idDateVentre" prefWidth="124.0" text="Date_Ventre" />
+               <TableColumn fx:id="idClient" prefWidth="124.0" text="Client" />
+            </columns>
+         </TableView>
+         <TextField fx:id="idlabelnomrace" layoutX="17.0" layoutY="549.0" prefHeight="26.0" prefWidth="261.0" promptText="Nom_De_Product" styleClass="styled-textfield" stylesheets="@../../Styles/Productionstyle.css" />
+         <TextField fx:id="idlebelqantitefinale" layoutX="658.0" layoutY="546.0" prefHeight="26.0" prefWidth="261.0" promptText="Quantite" styleClass="styled-textfield">
+            <stylesheets>
+               <URL value="@../../Styles/Styles/Productionstyle.css" />
+               <URL value="@../../Styles/Productionstyle.css" />
+            </stylesheets>
+         </TextField>
+         <TextField fx:id="idlebelprix" layoutX="340.0" layoutY="549.0" prefHeight="26.0" prefWidth="261.0" promptText="Prix" styleClass="styled-textfield">
+            <stylesheets>
+               <URL value="@../../Styles/Styles/Productionstyle.css" />
+               <URL value="@../../Styles/Productionstyle.css" />
+            </stylesheets>
+         </TextField>
+         <DatePicker fx:id="idlebeldateentre" layoutX="17.0" layoutY="604.0" prefHeight="26.0" prefWidth="261.0" promptText="Date_dentre" showWeekNumbers="true" styleClass="styled-textfield">
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <cursor>
+               <Cursor fx:constant="MOVE" />
+            </cursor>
+            <stylesheets>
+               <URL value="@../../Styles/Styles/Productionstyle.css" />
+               <URL value="@../../Styles/Productionstyle.css" />
+            </stylesheets>
+         </DatePicker>
+         <TextField fx:id="idlebelnomfournisseur" layoutX="658.0" layoutY="609.0" prefHeight="26.0" prefWidth="261.0" promptText="Date_Ventre" styleClass="styled-textfield" stylesheets="@../../Styles/Productionstyle.css" />
+         <Button fx:id="idbuttadd" layoutX="339.0" layoutY="680.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="158.0" styleClass="btnad" stylesheets="@../../Styles/Productionstyle.css" text="ADD">
+
+            <graphic>
+               <ImageView fitHeight="17.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../../Images/add.png" />
+               </ImageView>
+            </graphic></Button>
+         <Button fx:id="idbuttref" layoutX="530.0" layoutY="680.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="175.0" styleClass="btnad" stylesheets="@../../Styles/Productionstyle.css" text="EDIT">
+            <graphic>
+               <ImageView fitHeight="17.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../../Images/60.png" />
+               </ImageView>
+            </graphic></Button>
+         <Button fx:id="idbuttmodife" layoutX="750.0" layoutY="680.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="169.0" styleClass="btnad" stylesheets="@../../Styles/Productionstyle.css" text="DELETE">
+            <graphic>
+               <ImageView fitHeight="17.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../../Images/garbage.png" />
+               </ImageView>
+            </graphic></Button>
+         <TextField fx:id="idlebelprix1" layoutX="339.0" layoutY="609.0" prefHeight="26.0" prefWidth="261.0" promptText="Client" styleClass="styled-textfield">
+            <stylesheets>
+               <URL value="@../../Styles/Styles/Productionstyle.css" />
+               <URL value="@../../Styles/Productionstyle.css" />
+            </stylesheets>
+         </TextField>
+         <TextField fx:id="idserch" prefHeight="39.0" prefWidth="253.0" promptText="Seach" styleClass="styled-textfield" stylesheets="@../../Styles/Productionstyle.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
       </AnchorPane>
    </AnchorPane>
 </AnchorPane>

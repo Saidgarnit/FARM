@@ -1,57 +1,77 @@
 package com.example.login.Controllers.Farmer;
 
+import com.example.login.Models.Ventes;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ResourceBundle;
 
-public class YourControllerClass {
+public class VentesController implements Initializable {
+
+    public TableColumn idrace;
+    public TableColumn idnomrace;
+    public TableColumn idqantite;
+    public TableColumn idprix;
+    public TableColumn iddateentre;
+    public TableColumn iddateentre1;
+    public TextField idserch;
+    public TextField idlabelnomrace;
+    public TextField idlebelqantitefinale;
+    public TextField idlebelprix;
+    public DatePicker idlebeldateentre;
+    public TextField idlebelnomfournisseur;
+    public Button idbuttadd;
+    public Button idbuttref;
+    public Button idbuttmodife;
+    public TextField idlebelprix1;
+    @FXML
+    private TableView<Ventes> idtableview;
 
     @FXML
-    private TableView<YourDataModelClass> idtableview;
+    private TableColumn<Ventes, String> id;
 
     @FXML
-    private TableColumn<YourDataModelClass, String> idNomDeProduct;
+    private TableColumn<Ventes, String> idNomDeProduct;
 
     @FXML
-    private TableColumn<YourDataModelClass, String> idQuantite;
+    private TableColumn<Ventes, String> idQuantite;
 
     @FXML
-    private TableColumn<YourDataModelClass, String> idPrix;
+    private TableColumn<Ventes, String> idPrix;
 
     @FXML
-    private TableColumn<YourDataModelClass, String> idDateVentre;
+    private TableColumn<Ventes, String> idDateVentre;
 
     @FXML
-    private TableColumn<YourDataModelClass, String> idClient;
+    private TableColumn<Ventes, String> idClient;
 
     // Establish database connection
     private static final String JDBC_URL = "jdbc:mysql://localhost:3306/myprojectjavafx";
-    private static final String JDBC_USER = "your_username";
-    private static final String JDBC_PASSWORD = "your_password";
+    private static final String JDBC_USER = "root";
+    private static final String JDBC_PASSWORD = "";
 
-    @FXML
-    void initialize() {
-        // Initialize your TableView columns with corresponding properties from YourDataModelClass
-        idNomDeProduct.setCellValueFactory(new PropertyValueFactory<>("nomDeProductProperty"));
-        idQuantite.setCellValueFactory(new PropertyValueFactory<>("quantiteProperty"));
-        idPrix.setCellValueFactory(new PropertyValueFactory<>("prixProperty"));
-        idDateVentre.setCellValueFactory(new PropertyValueFactory<>("dateVentreProperty"));
-        idClient.setCellValueFactory(new PropertyValueFactory<>("clientProperty"));
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        // Initialize the table columns
+        idNomDeProduct.setCellValueFactory(new PropertyValueFactory<>("nomDeProduct"));
+        idQuantite.setCellValueFactory(new PropertyValueFactory<>("quantite"));
+        idPrix.setCellValueFactory(new PropertyValueFactory<>("prix"));
+        idDateVentre.setCellValueFactory(new PropertyValueFactory<>("dateVentre"));
+        idClient.setCellValueFactory(new PropertyValueFactory<>("client"));
 
         // Load data from the database
         loadDataFromDatabase();
 
-        // Set up any other initialization logic...
-
-        // Add event handlers for buttons or other interactive elements
-        // (Replace these with your actual event handlers)
+        // Attach event handler for table clicks
         idtableview.setOnMouseClicked(this::handleTableClick);
     }
 
@@ -62,7 +82,7 @@ public class YourControllerClass {
 
             while (resultSet.next()) {
                 // Create YourDataModelClass objects and add them to the TableView
-                YourDataModelClass dataModel = new YourDataModelClass(
+                Ventes dataModel = new Ventes(
                         resultSet.getString("Nom_De_Product"),
                         resultSet.getString("Quantite"),
                         resultSet.getString("Prix"),
@@ -81,5 +101,6 @@ public class YourControllerClass {
 
     private void handleTableClick(MouseEvent event) {
         // Logic for handling table clicks
+        // You can access the selected item using idtableview.getSelectionModel().getSelectedItem()
     }
 }

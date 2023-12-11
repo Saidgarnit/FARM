@@ -29,6 +29,10 @@ public class Ventes {
         this.client = client;
     }
 
+    public Ventes(String nomDeProduct, String quantite, String prix, String dateVentre, String client) {
+
+    }
+
     public int getId() {
         return id;
     }
