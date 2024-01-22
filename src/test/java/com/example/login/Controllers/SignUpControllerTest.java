@@ -34,4 +34,5 @@ class SignUpControllerTest {
     }
 
     // Add more tests as needed for other methods in your SignUpController
+    
 }
