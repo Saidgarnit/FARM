@@ -25,7 +25,7 @@ public class AdminDAO {
                 admin = new Admin(
                         resultSet.getString("full_name"),
                         resultSet.getString("email"),
-                        resultSet.getString("ntele"),
+                        resultSet.getString("ntele"), // Include Ntele
                         resultSet.getInt("Age"),
                         resultSet.getDate("datebird").toLocalDate(),
                         resultSet.getString("password"),

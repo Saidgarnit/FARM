@@ -32,6 +32,7 @@ public class LoginController implements Initializable {
     public PasswordField pswd_fld;
     public ImageView loginImgView;
     public Button Login_btn;
+    public Label error_lbl;
 
     private Connection dbConnection;
 

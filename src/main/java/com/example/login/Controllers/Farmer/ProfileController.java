@@ -49,7 +49,7 @@ public class ProfileController implements Initializable {
     private FileChooser fileChooser;
     private File selectedImageFile;
     @Override
-    
+
     public void initialize(URL url, ResourceBundle resourceBundle) {
         dbConnection = JBDC.connect();
         String loggedInAdminEmail = SessionManager.getInstance().getLoggedInAdminEmail();
@@ -133,7 +133,7 @@ public class ProfileController implements Initializable {
 
 
 
-    private void updateAdminProfile() {
+    void updateAdminProfile() {
         String newName = name_fld.getText();
         String newEmail = email_fld.getText().trim();
         String newTele = tele_fld.getText();
@@ -367,7 +367,7 @@ public class ProfileController implements Initializable {
                 showErrorAlert("Image Error", "Failed to load the profile image.");
             }
         } else {
-            showErrorAlert("Image Path Error", "Image path is missing or empty.");
+           // showErrorAlert("Image Path Error", "Image path is missing or empty.");
         }
     }
 

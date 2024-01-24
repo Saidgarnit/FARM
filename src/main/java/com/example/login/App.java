@@ -29,7 +29,7 @@ public class App extends Application {
         viewFactory.showClientWindow();
 
 //        // Call the method to retrieve admin records
-      //  JBDC.getAllAdminRecords();
+     // JBDC.getAllAdminRecords();
 
         // Wait for the thread to complete
         try {

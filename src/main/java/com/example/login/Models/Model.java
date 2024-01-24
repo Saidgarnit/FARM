@@ -11,7 +11,7 @@ public class Model {
 
     private Model() {
         StringProperty clientSelectedMenuItem = new SimpleStringProperty(""); // Initialize with a default value
-        viewFactory = new ViewFactory(clientSelectedMenuItem);
+        viewFactory = new ViewFactory();
     }
 
     public static synchronized Model getInstance() {

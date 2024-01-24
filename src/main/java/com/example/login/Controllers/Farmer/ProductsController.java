@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.text.Text;
 
 
 import java.net.URL;
@@ -19,6 +20,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 
 public class ProductsController implements Initializable {
+    public Text login_date;
     @FXML
      Button idbuttadd,idbuttmodife,idbuttref,searchbtn;
 

@@ -1,31 +1,95 @@
-
-.tableview .column-header-background{
-    -fx-background-color: #99e567;
-    -fx-background-insets: 0 0  0 0 ;
-
-}
-.tableview .column-header, .tableview .filler{
-    -fx-font-size: 13px;
-    -fx-border-width: 0 0  0 0 ;
-    -fx-background-color:transparent ;
-}
 .btnad {
-    -fx-background-color: #4CAF50; /* Green background */
-    -fx-text-fill: white; /* White text */
-    -fx-font-size: 14px; /* Font size */
-    -fx-padding: 10px 20px; /* Padding */
-}
-.btnad{
-    -fx-background-color: #45a049; /* Darker green background on hover */
+    -fx-background-color: #123A13;
+    -fx-text-fill: white;
+    -fx-font-size: 12px; /* Reduced font size */
+    -fx-padding: 6px 12px; /* Smaller padding */
+    -fx-border-radius: 3px;
+    -fx-border-color: #4CAF50;
+    -fx-border-width: 1.5px;
 }
 
+.btnad:hover {
+    -fx-background-color: #45a049;
+}
 
 .styled-textfield {
-    -fx-padding: 10px;
-    -fx-border-color: #163b02;
-    -fx-border-width: 2px;
-    -fx-border-radius: 5px;
+    -fx-padding: 6px; /* Smaller padding */
+    -fx-border-color: #4CAF50;
+    -fx-border-width: 1px; /* Reduced border width */
+    -fx-border-radius: 3px;
+    -fx-font-size: 12px; /* Reduced font size */
 }
 
+./* Modify the tableview background color */
+ .tableview {
+     -fx-background-color: #ECECEC; /* New table background color */
+     -fx-font-size: 12px; /* Reduced font size */
+     -fx-border-color: #123A13; /* New border color */
+     -fx-border-width: 1px;
+     -fx-border-radius: 3px;
+ }
+ /* Enable column resizing to fit content */
+ .table-view {
+     -fx-table-cell-resize-policy: CONSTRAINED_RESIZE; /* Enable content-based resizing */
+ }
+/* Modify the table cell alignment to center the text */
+.table-view .table-cell {
+    -fx-alignment: CENTER; /* Align text to the center */
+}
+ /* Modify the table row colors */
+ .table-row-cell {
+     -fx-padding: 4px;
+     -fx-background-color: #FFFFFF; /* Background color for rows */
+     -fx-border-color: #123A13; /* New border color */
+     -fx-border-width: 0 0 1 0;
+ }
 
+ /* Alternate row color */
+ .table-row-cell:odd {
+     -fx-background-color: #F0F0F0; /* Alternate row color */
+ }
 
+ /* Hover effect for rows */
+ .table-row-cell:hover {
+     -fx-background-color: #E0E0E0; /* Change hover color */
+ }
+
+ /* Modify the border color inside the table cells */
+ .tableview .table-cell {
+     -fx-padding: 8px;
+     -fx-border-color: #123A13; /* Updated border color inside the table cells */
+     -fx-border-width: 1px;
+     -fx-border-radius: 3px;
+ }
+
+/* Modify the styled-textfield border color */
+.styled-textfield {
+    -fx-padding: 6px; /* Smaller padding */
+    -fx-border-color: #4CAF50; /* New border color */
+    -fx-border-width: 1px; /* Reduced border width */
+    -fx-border-radius: 3px;
+    -fx-font-size: 12px; /* Reduced font size */
+}
+
+/* Modify the button styles */
+.btnad {
+    -fx-background-color: #123A13;
+    -fx-text-fill: white;
+    -fx-font-size: 12px; /* Reduced font size */
+    -fx-padding: 6px 12px; /* Smaller padding */
+    -fx-border-radius: 3px;
+    -fx-border-color: #4CAF50;
+    -fx-border-width: 1.5px;
+}
+
+.btnad:hover {
+    -fx-background-color: #45a049;
+}
+/* Modify the styled-textfield border color */
+.styled-textfield {
+    -fx-padding: 6px; /* Smaller padding */
+    -fx-border-color: #123A13; /* Updated border color */
+    -fx-border-width: 1px; /* Reduced border width */
+    -fx-border-radius: 3px;
+    -fx-font-size: 12px; /* Reduced font size */
+}
