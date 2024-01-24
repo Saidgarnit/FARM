@@ -54,9 +54,8 @@ public class ProductsController implements Initializable {
 
 
     //Database
-    static String url = "jdbc:mysql://localhost:3306/myprojectjavafx";
-    static String uname = "root";
-    static String pass = "";
+
+
 
 
     //pour faire un connecton avec code et database
@@ -73,7 +72,7 @@ public class ProductsController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
-            con= DriverManager.getConnection(url,uname,pass);
+            con= DriverManager.getConnection("jdbc:mysql://localhost:3306/myprojectjavafx","root","");
         }catch (Exception e){
             System.out.println(e.toString());
         }
@@ -122,6 +121,9 @@ public class ProductsController implements Initializable {
                 idlebelnomemploye.getSelectionModel().getSelectedItem(),
                 idlebelnomfournisseur.getText(),
                 idlebelorigine.getText());
+
+
+
             try {
                 stmt = con.prepareStatement("INSERT INTO `production` (`metrage`, `Nom_de_race`, `Quantite`, `Qantite_Finale`, `Prix`, `Date_dentre` , `origine`,`Nom_de_lemploye`,`nom_de_fournisseur`) VALUES (?,?,?,?,?,?,?,?,?)");
                 stmt.setInt(1,T1);
@@ -155,11 +157,12 @@ getdata();
                         rs.getString("Qantite_Finale"),
                         rs.getDouble("Prix"),
                         rs.getString("Date_dentre"),
-                        rs.getString("origine"),
                         rs.getString("Nom_de_lemploye"),
-                        rs.getString("nom_de_fournisseur")
+                        rs.getString("nom_de_fournisseur"),
+                        rs.getString("origine")
 
-                ); idtableview.getItems().add(pro);
+                        );
+                idtableview.getItems().add(pro);
             }
             idtableview.refresh();
     }catch (Exception e){

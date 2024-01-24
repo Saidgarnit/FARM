@@ -2,7 +2,6 @@ package com.example.login.Models;
 
 public class Production {
     private int id ;
-
     private int metrage;
     private String Nom_de_race;
     private String Quantite;
@@ -13,8 +12,7 @@ public class Production {
     private String Nom_de_fournisseur;
     private String origine;
 
-    public Production() {
-    }
+
 
     public Production(int id, int metrage, String nom_de_race, String quantite, String qantite_Finale, double prix, String date_dentre, String nom_de_lemploye, String nom_de_fournisseur, String origine) {
         this.id = id;
@@ -40,6 +38,17 @@ public class Production {
         this.Nom_de_lemploye = nom_de_lemploye;
         this.Nom_de_fournisseur = nom_de_fournisseur;
         this.origine = origine;
+    }
+
+    public Production(String nomDeRace, String quantite) {
+        this.Nom_de_race = nomDeRace;
+        this.Quantite = quantite;
+    }
+
+    public Production(int id, String nomDeRace, String quantite) {
+        this.id = id;
+        this.Nom_de_race = nomDeRace;
+        this.Quantite = quantite;
     }
 
 
